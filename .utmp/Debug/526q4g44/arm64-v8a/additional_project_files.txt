@@ -1,0 +1,17 @@
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\GAToUnityCallbacks.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\MacroEnd.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\MacroHeaderBegin.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\MacroSourceBegin.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGAApplication.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGAConfiguration.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGADebug.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGAEvents.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGAInput.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboard.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboardCallbacks.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGATypes.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UGAVersion.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UnityToGACallbacks.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h

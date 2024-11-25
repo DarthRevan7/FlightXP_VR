@@ -1,0 +1,10 @@
+# ninja log v5
+113	1563	7541717536802195	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	9db433b8cbcdaf7d
+51	1576	7541717537003874	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b03c30b43b9c392a
+168	1639	7541717537322275	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	6f149d264f7af7e2
+150	1754	7541717538711706	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5364e6f8959a7b67
+96	2034	7541717541594066	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	814ac78c2c1fae32
+1	2058	7541717541771175	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	d73d93ce31d6c4ea
+190	2294	7541717544148264	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b0d4df7b6aa810f6
+159	2500	7541717546229989	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	24e70a26f92bc214
+2501	2638	7541717547545678	C:/GitHub/PolitoPro/FlightXP_VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/pe1rd4k6/obj/arm64-v8a/libgame.so	ec0cc72a1bc6dc4f

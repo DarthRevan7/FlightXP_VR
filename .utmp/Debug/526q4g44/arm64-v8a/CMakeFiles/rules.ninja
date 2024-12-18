@@ -42,7 +42,7 @@ rule CXX_SHARED_LIBRARY_LINKER__game_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\Unity\Hub\Editor\6000.0.28f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\cmake\3.22.1\bin\cmake.exe" --regenerate-during-build -SC:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp -BC:\GitHub\PolitoPro\FlightXP_VR_Original\.utmp\Debug\526q4g44\arm64-v8a
+  command = "C:\Program Files\Unity\Hub\Editor\6000.0.28f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\cmake\3.22.1\bin\cmake.exe" --regenerate-during-build -SC:\GitHub\PolitoPro\FlightXP_VR_Original\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp -BC:\GitHub\PolitoPro\FlightXP_VR_Original\.utmp\Debug\526q4g44\arm64-v8a
   description = Re-running CMake...
   generator = 1
 

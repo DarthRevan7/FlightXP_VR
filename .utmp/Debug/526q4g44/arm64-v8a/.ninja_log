@@ -1,10 +1,10 @@
 # ninja log v5
-0	1077	7550306779048738	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	91b7940e6c3427ca
-34	1142	7550306779715981	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ca3f8ef771d16c71
-71	1173	7550306780032699	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3f9e9a87e4830b8e
-110	1188	7550306780165173	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78188264fcf5349d
-89	1192	7550306780215985	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	230180e55acce32a
-21	1230	7550306780618333	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e6886a1e08361e3
-61	1333	7550306781598788	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d6b30257c5589c
-11	1384	7550306782098789	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c487262e6d1a235f
-1384	1585	7550306783935222	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/PramData/AndroidApplicationController/Cache/com.unity.template.vr/gradle-project/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	65855caae9e4ce32
+13	606	7562514244402598	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1e151b22ffe68d24
+25	609	7562514244360758	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	415d427e1dc68d7a
+17	610	7562514244345611	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	30152ca47362db7f
+21	618	7562514244532355	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c7bfe74477cd604e
+4	624	7562514244603180	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	261464b86afbbe7f
+0	632	7562514244663532	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	1dd403c8fadb4471
+10	671	7562514245051540	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	b9c0d973a342bede
+7	698	7562514245274704	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	ea184b60f774eb42
+699	806	7562514246332857	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	64172f3cefeffcb4

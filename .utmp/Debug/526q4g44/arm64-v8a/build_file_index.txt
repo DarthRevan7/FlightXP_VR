@@ -1,2 +1,2 @@
-C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\CMakeLists.txt
-C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\PramData\AndroidApplicationController\Cache\com.unity.template.vr\gradle-project\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\GitHub\PolitoPro\FlightXP_VR_Original\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

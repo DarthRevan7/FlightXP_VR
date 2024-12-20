@@ -253,7 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
   m_Name: VisionOS
   m_EditorClassIdentifier: 
-  features: []
+  features:
+  - {fileID: 4478241396591151067}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -913,23 +914,23 @@ MonoBehaviour:
   m_Name: Android
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 8128971989023737286}
-  - {fileID: 5323458825516098386}
-  - {fileID: -3806478962395883152}
-  - {fileID: 1748586325296573520}
   - {fileID: 1463328409094961201}
-  - {fileID: -3001656557567718303}
-  - {fileID: -652521925855103857}
-  - {fileID: 6276767973136014456}
-  - {fileID: 6170772248295146898}
-  - {fileID: -7929715881213856740}
-  - {fileID: 6674990401381083559}
-  - {fileID: 1764884326370329295}
   - {fileID: 7396019973764294503}
-  - {fileID: -5515902072290754253}
+  - {fileID: -3001656557567718303}
   - {fileID: -8683280135497830460}
-  - {fileID: 7381003986773367313}
+  - {fileID: 1764884326370329295}
   - {fileID: 5542714020160636710}
+  - {fileID: 7381003986773367313}
+  - {fileID: 1748586325296573520}
+  - {fileID: 6170772248295146898}
+  - {fileID: -5515902072290754253}
+  - {fileID: 6674990401381083559}
+  - {fileID: -3806478962395883152}
+  - {fileID: 5323458825516098386}
+  - {fileID: -652521925855103857}
+  - {fileID: -7929715881213856740}
+  - {fileID: 8128971989023737286}
+  - {fileID: 6276767973136014456}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -951,25 +952,25 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 2557147381151769714}
-  - {fileID: 899028913982766804}
   - {fileID: -2981282432430471204}
-  - {fileID: -5927546655625324294}
-  - {fileID: -5572674047374123105}
-  - {fileID: -7587488759873955216}
-  - {fileID: -4396162504316296795}
-  - {fileID: -8276059595691515773}
-  - {fileID: 2414900501435499324}
-  - {fileID: -7302977299281358420}
-  - {fileID: 7280375871818528190}
-  - {fileID: 5596198535128501487}
-  - {fileID: -3784905860537121955}
   - {fileID: -4263528439468585584}
-  - {fileID: -6595942137215079766}
-  - {fileID: 9223210569899868041}
+  - {fileID: -5572674047374123105}
   - {fileID: -3628065985293082216}
-  - {fileID: -3397915628212281603}
+  - {fileID: -3784905860537121955}
   - {fileID: 7557221876397970658}
+  - {fileID: -7302977299281358420}
+  - {fileID: -5927546655625324294}
+  - {fileID: -3397915628212281603}
+  - {fileID: 2414900501435499324}
+  - {fileID: -6595942137215079766}
+  - {fileID: 5596198535128501487}
+  - {fileID: -7587488759873955216}
+  - {fileID: 899028913982766804}
+  - {fileID: -4396162504316296795}
+  - {fileID: 7280375871818528190}
+  - {fileID: 2557147381151769714}
+  - {fileID: 9223210569899868041}
+  - {fileID: -8276059595691515773}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -1020,6 +1021,26 @@ MonoBehaviour:
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
   m_foveatedRenderingApi: 0
+--- !u!114 &4478241396591151067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b213d3e3c7f3109449eb46a4c8ee42f0, type: 3}
+  m_Name: XrPerformanceSettingsFeature VisionOS
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: XR Performance Settings
+  version: 1.0.0
+  featureIdInternal: com.unity.openxr.feature.extension.performance_settings
+  openxrExtensionStrings: XR_EXT_performance_settings
+  company: Unity
+  priority: 0
+  required: 0
 --- !u!114 &4927340380853709035
 MonoBehaviour:
   m_ObjectHideFlags: 0

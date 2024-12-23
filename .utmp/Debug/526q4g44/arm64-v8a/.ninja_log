@@ -1,10 +1,10 @@
 # ninja log v5
-92	1770	7566651583385150	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ca3f8ef771d16c71
-1	1780	7566651583385150	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	91b7940e6c3427ca
-104	1795	7566651583605736	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78188264fcf5349d
-56	1801	7566651583686328	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3f9e9a87e4830b8e
-119	1875	7566651584383010	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	230180e55acce32a
-17	1903	7566651584743393	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e6886a1e08361e3
-77	2118	7566651586704439	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d6b30257c5589c
-39	2196	7566651587317514	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c487262e6d1a235f
-2197	2564	7566651590743530	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/PramData/AndroidApplicationController/Cache/com.unity.template.vr/gradle-project/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	65855caae9e4ce32
+20	1140	7566795836528325	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	91b7940e6c3427ca
+37	1147	7566795836603945	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3f9e9a87e4830b8e
+46	1161	7566795836730961	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ca3f8ef771d16c71
+62	1195	7566795837098360	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	230180e55acce32a
+54	1212	7566795837253171	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78188264fcf5349d
+11	1234	7566795837500022	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e6886a1e08361e3
+29	1343	7566795838546031	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d6b30257c5589c
+1	1400	7566795839040885	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c487262e6d1a235f
+1400	1596	7566795840913817	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/PramData/AndroidApplicationController/Cache/com.unity.template.vr/gradle-project/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	65855caae9e4ce32

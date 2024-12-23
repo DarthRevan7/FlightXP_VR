@@ -4,6 +4,10 @@ using UnityEngine;
 //Usare su Empty Gameobject, per avere la posizione in cui una parte di aereo deve attaccarsi
 //al modello 3D.
 
+
+//Si dovrebbe chiamare PlaceHolder come classe.
+
+
 public class DragPoint : MonoBehaviour
 {
 
@@ -30,10 +34,7 @@ public class DragPoint : MonoBehaviour
 
         foreach(Collider c in colliders)
         {
-            if(c.GetComponent<DraggableObject>().GetPartName() == draggableObject.GetPartName())
-            {
-                return true;
-            }
+            
         }
 
         return false;

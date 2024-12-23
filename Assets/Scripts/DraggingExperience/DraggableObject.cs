@@ -10,6 +10,13 @@ anziché cambiare materiale a sta roba qui...
 
 */
 
+/*
+
+gameobject.name è il nome assegnato nella Hierarchy.
+
+*/
+
+[RequireComponent(typeof(MeshCollider))]
 public class DraggableObject : MonoBehaviour
 {
 
@@ -20,11 +27,10 @@ public class DraggableObject : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        originalMaterial = GetComponent<MeshRenderer>().material;
-        if(highlightMaterial != null)
-        {
-            GetComponent<MeshRenderer>().material = highlightMaterial;
-        }
+        partName = gameObject.name;
+        
+
+        
     }
 
     // Update is called once per frame
@@ -35,23 +41,11 @@ public class DraggableObject : MonoBehaviour
 
     public string GetPartName()
     {
-        return this.partName;
+        return partName;
     }
 
-    public void ChangeMaterial(int material)
-    {
-        if(material == 0)
-        {
-            GetComponent<MeshRenderer>().material = originalMaterial;
-        }
-        else if(material == 1)
-        {
-            GetComponent<MeshRenderer>().material = highlightMaterial;
-        }
-        else
-        {
-            Debug.Log("Wrong assignment to ChangeMaterial method!\n");
-        }
-    }
+    
+
+    
 
 }

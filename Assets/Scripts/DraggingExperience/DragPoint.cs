@@ -6,7 +6,7 @@ using TMPro;
 //al modello 3D.
 
 
-//Si dovrebbe chiamare PlaceHolder come classe.
+//Si dovrebbe chiamare MeshPlaceholder come classe.
 
 
 public class DragPoint : MonoBehaviour
@@ -32,17 +32,6 @@ public class DragPoint : MonoBehaviour
         
     }
 
-    private bool CheckPosition()
-    {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, posDelta);
-
-        foreach(Collider c in colliders)
-        {
-            
-        }
-
-        return false;
-    }
 
     private void OnCollisionEnter(Collision other) {
         string otherName, thisName;

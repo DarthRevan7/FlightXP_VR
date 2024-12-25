@@ -7,12 +7,16 @@ public class DraggingManager : MonoBehaviour
 
     public static DraggingManager instance;
 
+    
     [SerializeField] private MeshRenderer[] materialParts;
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private bool experienceFinished = false;
     [SerializeField] private TMP_Text statoEsperienzaText;
 
-    [SerializeField] private GameObject aereoInPezzi;
+    [SerializeField] private GameObject aereoInPezzi, aereoInPezziPrefab;
+    [SerializeField] private Vector3 aereoInPezziPosition;
+    [SerializeField] private Quaternion aereoInPezziRotation;
+
 
 
     /*
@@ -43,6 +47,8 @@ public class DraggingManager : MonoBehaviour
         experienceFinished = ExperienceEnded();
 
         aereoInPezzi = GameObject.Find("Aereo in pezzi");
+        aereoInPezziPosition = aereoInPezzi.transform.position;
+        aereoInPezziRotation = aereoInPezzi.transform.rotation;
     }
 
     // Update is called once per frame
@@ -61,6 +67,8 @@ public class DraggingManager : MonoBehaviour
         {
             materialParts[i].material = highlightMaterial;
         }
+        Destroy(aereoInPezzi);
+        aereoInPezzi = GameObject.Instantiate(aereoInPezziPrefab, aereoInPezziPosition, aereoInPezziRotation);
     }
 
     //L'esperienza è finita quando i materiali sono tutti diversi da quello per l'effetto highlight

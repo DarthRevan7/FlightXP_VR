@@ -1,10 +1,10 @@
 # ninja log v5
-37	1363	7567620460287200	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ca3f8ef771d16c71
-79	1371	7567620460297171	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3f9e9a87e4830b8e
-11	1377	7567620460391819	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	91b7940e6c3427ca
-90	1380	7567620460432367	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78188264fcf5349d
-100	1407	7567620460703957	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	230180e55acce32a
-18	1502	7567620461644527	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e6886a1e08361e3
-25	1622	7567620462787262	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d6b30257c5589c
-1	1655	7567620463103767	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c487262e6d1a235f
-1656	1984	7567620466042179	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/PramData/AndroidApplicationController/Cache/com.unity.template.vr/gradle-project/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	65855caae9e4ce32
+57	1205	7568265130152640	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ca3f8ef771d16c71
+68	1227	7568265130377233	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3f9e9a87e4830b8e
+28	1230	7568265130454232	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	91b7940e6c3427ca
+81	1288	7568265130986973	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	230180e55acce32a
+13	1320	7568265131351954	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e6886a1e08361e3
+95	1322	7568265131377589	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78188264fcf5349d
+43	1427	7568265132228105	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d6b30257c5589c
+0	1544	7568265133401676	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c487262e6d1a235f
+1546	1862	7568265136458024	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/PramData/AndroidApplicationController/Cache/com.unity.template.vr/gradle-project/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	65855caae9e4ce32

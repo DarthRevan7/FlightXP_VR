@@ -11,9 +11,10 @@ public class DraggingManager : MonoBehaviour
     [SerializeField] private MeshRenderer[] materialParts;
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private bool experienceFinished = false;
-    [SerializeField] private TMP_Text statoEsperienzaText;
+    [SerializeField] private TMP_Text statoEsperienzaText, childCountText;
 
     [SerializeField] private GameObject aereoInPezzi, aereoInPezziPrefab;
+    [SerializeField] private GameObject[] lastObjects;
     [SerializeField] private Vector3 aereoInPezziPosition;
     [SerializeField] private Quaternion aereoInPezziRotation;
 
@@ -49,6 +50,8 @@ public class DraggingManager : MonoBehaviour
         aereoInPezzi = GameObject.Find("Aereo in pezzi");
         aereoInPezziPosition = aereoInPezzi.transform.position;
         aereoInPezziRotation = aereoInPezzi.transform.rotation;
+
+        lastObjects = new GameObject[2];
     }
 
     // Update is called once per frame
@@ -56,7 +59,8 @@ public class DraggingManager : MonoBehaviour
     {
         experienceFinished = ExperienceEnded();
         statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
-        Debug.Log("Child Count: " + aereoInPezzi.transform.childCount.ToString());
+        //Debug.Log("Child Count: " + aereoInPezzi.transform.childCount.ToString());
+        childCountText.text = "ChildCount: " + aereoInPezzi.transform.childCount.ToString();
     }
 
     //L'esperienza viene fatta ripartire ripristinando il materiale di highlight per tutte le parti
@@ -74,19 +78,12 @@ public class DraggingManager : MonoBehaviour
     //L'esperienza è finita quando i materiali sono tutti diversi da quello per l'effetto highlight
     private bool ExperienceEnded()
     {
-        
-        //bool result = true;
-
-        /*
-        foreach(MeshRenderer m in materialParts)
+        if(aereoInPezzi.transform.childCount == 2)
         {
-            result = result && m.material != highlightMaterial;
+            lastObjects[0] = aereoInPezzi.transform.GetChild(aereoInPezzi.transform.childCount -1).gameObject;
+            lastObjects[1] = aereoInPezzi.transform.GetChild(aereoInPezzi.transform.childCount -2).gameObject;
         }
-
-        return result;
-        */
-
-        if(aereoInPezzi.transform.childCount == 0)
+        if(aereoInPezzi.transform.childCount == 0 && lastObjects[0] == null && lastObjects[1] == null)
             return true;
         return false;
         

@@ -43,7 +43,7 @@ public class DragPoint : MonoBehaviour
         if(thisName.Equals(otherName))
         {
             GetComponent<MeshRenderer>().material = originalMaterial;
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
 
         

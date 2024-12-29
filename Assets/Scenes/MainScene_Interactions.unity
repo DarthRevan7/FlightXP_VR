@@ -1755,6 +1755,7 @@ MonoBehaviour:
   childCountText: {fileID: 589619923}
   aereoInPezzi: {fileID: 2093783202}
   aereoInPezziPrefab: {fileID: 3531405634836735525, guid: 13e1a554a6c3ab14ba7005bd5603a939, type: 3}
+  lastObjects: []
   aereoInPezziPosition: {x: 0, y: 0, z: 0}
   aereoInPezziRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &512312238

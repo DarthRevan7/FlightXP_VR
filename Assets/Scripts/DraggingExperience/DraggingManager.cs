@@ -47,10 +47,16 @@ public class DraggingManager : MonoBehaviour
 
         experienceFinished = ExperienceEnded();
 
+
+        //Modificare il nome del container delle mesh dell'aereo, nel caso in cui sia diverso
+        //da questo.
         aereoInPezzi = GameObject.Find("Aereo in pezzi");
         aereoInPezziPosition = aereoInPezzi.transform.position;
         aereoInPezziRotation = aereoInPezzi.transform.rotation;
 
+        //Questo array servirà a contenere i riferimenti agli ultimi due gameobject rimasti da
+        //sistemare, in modo da fornire un feedback corretto riguardo alla fine dell'esperienza
+        //di dragging.
         lastObjects = new GameObject[2];
     }
 
@@ -58,13 +64,15 @@ public class DraggingManager : MonoBehaviour
     void Update()
     {
         experienceFinished = ExperienceEnded();
+
+        //Text field di debug.
         statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
         //Debug.Log("Child Count: " + aereoInPezzi.transform.childCount.ToString());
         childCountText.text = "ChildCount: " + aereoInPezzi.transform.childCount.ToString();
     }
 
     //L'esperienza viene fatta ripartire ripristinando il materiale di highlight per tutte le parti
-    //del velivolo
+    //del velivolo e re-instanziando il modellino prefab delle parti di aereo da sistemare.
     public void RestartExperience()
     {
         for(int i = 0; i < materialParts.Length; i++)
@@ -75,7 +83,11 @@ public class DraggingManager : MonoBehaviour
         aereoInPezzi = GameObject.Instantiate(aereoInPezziPrefab, aereoInPezziPosition, aereoInPezziRotation);
     }
 
-    //L'esperienza è finita quando i materiali sono tutti diversi da quello per l'effetto highlight
+    //L'esperienza è finita quando i children del transform che contiene i pezzetti di aereo da 
+    //sistemare sono zero e gli ultimi due gameobject sono stati distrutti.
+    //La parte degli ultimi 2 gameobjects è necessaria, perché un gameobject "grabbato" è 
+    //considerato "child" del controller, pertanto viene "sottratto" ai gameobjects children del
+    //gameobject container.
     private bool ExperienceEnded()
     {
         if(aereoInPezzi.transform.childCount == 2)

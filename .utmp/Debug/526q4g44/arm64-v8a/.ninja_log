@@ -1,10 +1,10 @@
 # ninja log v5
-55	1182	7571049700743732	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ca3f8ef771d16c71
-1	1192	7571049700851072	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	91b7940e6c3427ca
-21	1230	7571049701230547	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3f9e9a87e4830b8e
-65	1249	7571049701425896	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	230180e55acce32a
-81	1256	7571049701499742	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78188264fcf5349d
-14	1276	7571049701680310	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e6886a1e08361e3
-32	1383	7571049702734356	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d6b30257c5589c
-9	1480	7571049703648591	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c487262e6d1a235f
-1480	1700	7571049705846395	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/PramData/AndroidApplicationController/Cache/com.unity.template.vr/gradle-project/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	65855caae9e4ce32
+69	1111	7577975351263081	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ca3f8ef771d16c71
+1	1135	7577975351515018	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	91b7940e6c3427ca
+84	1149	7577975351644220	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78188264fcf5349d
+20	1204	7577975352209840	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e6886a1e08361e3
+45	1216	7577975352326117	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3f9e9a87e4830b8e
+99	1230	7577975352483006	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	230180e55acce32a
+34	1329	7577975353416994	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	23d6b30257c5589c
+11	1418	7577975354196067	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c487262e6d1a235f
+1419	1606	7577975356016069	C:/GitHub/PolitoPro/FlightXP_VR_Original/Library/PramData/AndroidApplicationController/Cache/com.unity.template.vr/gradle-project/unityLibrary/build/intermediates/cxx/Debug/526q4g44/obj/arm64-v8a/libgame.so	65855caae9e4ce32

@@ -50,7 +50,7 @@ public class DraggingManager : MonoBehaviour
 
         //Modificare il nome del container delle mesh dell'aereo, nel caso in cui sia diverso
         //da questo.
-        aereoInPezzi = GameObject.Find("Aereo in pezzi");
+        aereoInPezzi = GameObject.Find("Aereo_InPezzi");
         aereoInPezziPosition = aereoInPezzi.transform.position;
         aereoInPezziRotation = aereoInPezzi.transform.rotation;
 

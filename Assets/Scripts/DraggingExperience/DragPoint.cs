@@ -30,7 +30,7 @@ public class DragPoint : MonoBehaviour
         //dell'oggetto con script DragPoint e distruggo l'altro oggetto.
         if(thisName.Equals(otherName))
         {
-            GetComponent<MeshRenderer>().material = originalMaterial;
+            GetComponent<MeshRenderer>().material = other.gameObject.GetComponent<MeshRenderer>().material;
             Destroy(other.gameObject);
         }
 

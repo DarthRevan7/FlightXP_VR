@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene_Draggables.unity
     guid: a642d8765ce2a6e4c87163ff3e9aba7f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene_Interactables.unity
     guid: 6addda033dc64774eb903e777de1ca8a
+  - enabled: 1
+    path: Assets/Scenes/MainScene_Draggables_new.unity
+    guid: 881af6fe29701a04a815ab5e9b01268e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e452bac8ffba3394693e1b8bd76a977e, type: 2}

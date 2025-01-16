@@ -34,11 +34,15 @@ public class PlaneCamera : MonoBehaviour
             float mouseX = mouseDelta.x * sensitivity;
             float mouseY = mouseDelta.y * sensitivity;
 
+            if (Mathf.Abs(mouseX) > 180.0 / 4.0 || Mathf.Abs(mouseY) > 180.0 / 4.0) return;
+
             // Adjust vertical rotation (clamp to prevent flipping)
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
             yRotation += mouseX;
+
+            
 
             // Apply rotations
             transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f); // Vertical rotation (pitch)

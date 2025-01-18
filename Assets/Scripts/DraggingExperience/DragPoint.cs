@@ -16,6 +16,7 @@ public class DragPoint : MonoBehaviour
     [SerializeField] private TMP_Text textArea;
     //Material originale dell'oggetto, non highlight
     [SerializeField] private Material originalMaterial;
+    [SerializeField] private GameObject coverPanel;
 
     private void OnCollisionEnter(Collision other) {
         //Ricavo le stringhe dei nomi dei gameobjects
@@ -32,7 +33,9 @@ public class DragPoint : MonoBehaviour
         {
             GetComponent<MeshRenderer>().material = other.gameObject.GetComponent<MeshRenderer>().material;
             Destroy(other.gameObject);
+            coverPanel.SetActive(false);
         }
+
 
         
     }

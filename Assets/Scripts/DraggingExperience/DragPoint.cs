@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 
 
@@ -16,7 +17,13 @@ public class DragPoint : MonoBehaviour
     [SerializeField] private TMP_Text textArea;
     //Material originale dell'oggetto, non highlight
     [SerializeField] private Material originalMaterial;
+    //Pannello di copertura per "sbloccare" le informazioni relative alla parte di aereo selezionata.
     [SerializeField] private GameObject coverPanel;
+    //Array delle UI card di cui è composta la UI in cui visualizzi le parti di aereo con le info di sotto.
+    [SerializeField] private List<GameObject> UICards = new List<GameObject>();
+    //Indice della UI card relativo alla parte di aereo a cui è attaccato questo script.
+    [SerializeField] private int UICardIndex;
+    
 
     private void OnCollisionEnter(Collision other) {
         //Ricavo le stringhe dei nomi dei gameobjects
@@ -34,9 +41,26 @@ public class DragPoint : MonoBehaviour
             GetComponent<MeshRenderer>().material = other.gameObject.GetComponent<MeshRenderer>().material;
             Destroy(other.gameObject);
             coverPanel.SetActive(false);
+            GameObject activeElement = ReturnActiveElement();
+            if(activeElement != null)
+            {
+                activeElement.SetActive(false);
+                UICards[UICardIndex].SetActive(true);
+            }
+
+
         }
+    }
 
-
-        
+    private GameObject ReturnActiveElement()
+    {
+        foreach(GameObject go in UICards)
+        {
+            if(go.activeInHierarchy)
+            {
+                return go;
+            }
+        }
+        return null;
     }
 }

@@ -1,4 +1,3 @@
-using Unity.Tutorials.Core.Editor;
 using UnityEngine;
 
 public class navball : MonoBehaviour

@@ -4,9 +4,8 @@ using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static PlanePhy2;
-using static UnityEditor.PlayerSettings;
-using static UnityEditor.Rendering.FilterWindow;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class PlanePhy2 : MonoBehaviour
 {
@@ -19,7 +18,7 @@ public class PlanePhy2 : MonoBehaviour
     public bool autopilotEngaged = true;
 
     [SerializeField]
-    private InputActionReference roll, pitch, yaw, throttle;
+    private InputActionReference roll, pitch, yaw, throttle, autopilot;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +32,19 @@ public class PlanePhy2 : MonoBehaviour
         model.Velocity = new Vector3(50, 0,0);
 
         //model.RPY = startRPY;
+    }
+
+    void Update()
+    {
+        if(autopilot.action.IsPressed())
+        {
+            ToggleAutopilot(); 
+        }
+    }
+
+    public void ToggleAutopilot()
+    {
+        autopilotEngaged = !autopilotEngaged;
     }
 
     public float getAltitude()
@@ -67,10 +79,19 @@ public class PlanePhy2 : MonoBehaviour
     {
         float deltaT = Time.deltaTime/ timeDilation;
 
-        float roll_in = roll.action.ReadValue<float>(), pitch_in = pitch.action.ReadValue<float>(), yaw_in = yaw.action.ReadValue<float>();
+        //Input
+        float roll_in = roll.action.ReadValue<float>();
+        float pitch_in = pitch.action.ReadValue<float>();
+        float yaw_in = yaw.action.ReadValue<float>();
 
         float throttle_in = model.Throttle;
-        if (throttle.action.ReadValue<float>() != 0) throttle_in = throttle.action.ReadValue<float>();
+
+        if (throttle.action.ReadValue<float>() != 0) 
+        {
+            throttle_in = throttle.action.ReadValue<float>();
+        }
+
+
 
         if(autopilotEngaged)
         {

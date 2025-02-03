@@ -22,7 +22,7 @@ public class MainMenuUIManager : MonoBehaviour
 
     public void StartXP()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(1);
     }
 
 }

@@ -7,6 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Main Menu Scene.unity
+<<<<<<< HEAD
     guid: 573f37bea10c3974e9b5fdcb33101c5c
   - enabled: 0
     path: Assets/Scenes/MainScene_intro.unity
@@ -20,6 +21,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene_Draggables_new.unity
     guid: 881af6fe29701a04a815ab5e9b01268e
+=======
+    guid: e5e14c378b1e8a3429e9956f8238df79
+  - enabled: 1
+    path: Assets/Scenes/flight_scene.unity
+    guid: c92a3d9f53cd3484387fb6a4f9d0ae43
+>>>>>>> e328fe8a1b850c39d61a03520df58af74ca380aa
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e452bac8ffba3394693e1b8bd76a977e, type: 2}

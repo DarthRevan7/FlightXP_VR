@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Scene.unity
     guid: e5e14c378b1e8a3429e9956f8238df79
   - enabled: 1
-    path: Assets/Scenes/flight_scene.unity
-    guid: c92a3d9f53cd3484387fb6a4f9d0ae43
+    path: Assets/Scenes/Scena Volo.unity
+    guid: c9c6f57621e259946b5ad8b71e82611d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e452bac8ffba3394693e1b8bd76a977e, type: 2}

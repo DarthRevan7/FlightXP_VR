@@ -100,4 +100,20 @@ public class DraggingManager : MonoBehaviour
         return false;
         
     }
+
+    public bool GetExperienceFinished()
+    {
+        return experienceFinished;
+    }
+
+    public void SetPlaneMaterial(Material material)
+    {
+        for(int i = 0; i < materialParts.Length; i++)
+        {
+            materialParts[i].material = material;
+        }
+
+        
+        
+    }
 }

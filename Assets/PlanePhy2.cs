@@ -36,7 +36,7 @@ public class PlanePhy2 : MonoBehaviour
 
     void Update()
     {
-        if(autopilot.action.IsPressed())
+        if(autopilot != null && autopilot.action.IsPressed())
         {
             ToggleAutopilot(); 
         }
@@ -72,6 +72,17 @@ public class PlanePhy2 : MonoBehaviour
         Vector3 w_speed = model.GenerateRPYToWorldMatrix() * model.Velocity;
 
         return w_speed.z; 
+    }
+
+    Vector3 offset = Vector3.zero;
+    public void increaseOffset(Vector3 pos)
+    {
+        offset += pos;
+    }
+
+    public Vector3 getWorldPosition()
+    {
+        return new Vector3(model.Position.y, -model.Position.z, model.Position.x);
     }
 
     // Update is called once per frame
@@ -121,7 +132,7 @@ public class PlanePhy2 : MonoBehaviour
 
             pitch_in += -model.AngularAcceleration.y - model.AngularVelocity.y - (model.RPY.y - 0.1f);
 
-            Debug.Log($"Speed: {getSpeed()}");
+            //Debug.Log($"Speed: {getSpeed()}");
         }
 
         //if (roll.action.ReadValue<float>() > 0) roll_in = -1;
@@ -143,7 +154,7 @@ public class PlanePhy2 : MonoBehaviour
         // -> y, -z, x
         //
 
-        transform.position = new Vector3 (model.Position.y, -model.Position.z, model.Position.x);
+        transform.position = getWorldPosition() + offset;
 
        // transform.RotateAround()
 

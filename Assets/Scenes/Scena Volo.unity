@@ -142,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978711011308912632, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1461
+      value: 2703
       objectReference: {fileID: 0}
     - target: {fileID: 1978711011308912632, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -176,6 +176,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3552336736675490244, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
+      propertyPath: autopilotEngaged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877589951774230912, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -191,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264683244}
   - component: {fileID: 1264683243}
+  - component: {fileID: 1264683245}
   m_Layer: 0
   m_Name: scene_manager
   m_TagString: Untagged
@@ -228,6 +237,23 @@ Transform:
   - {fileID: 1941817544}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264683245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264683242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ba7bc53401bf3488aaa194d050ac85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane: {fileID: 2052622512}
+  bound_min: {x: 0, y: 0}
+  bound_max: {x: 20000, y: 20000}
+  out_of_bounds: 0
+  out_of_bounds_time: 0
 --- !u!1 &1941817541
 GameObject:
   m_ObjectHideFlags: 0

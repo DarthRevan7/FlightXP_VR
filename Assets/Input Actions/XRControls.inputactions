@@ -1,0 +1,134 @@
+{
+    "name": "XRControls",
+    "maps": [
+        {
+            "name": "Meta Quest 3",
+            "id": "fc629eac-e831-4253-91e9-0aeab06ebfd8",
+            "actions": [
+                {
+                    "name": "roll",
+                    "type": "Value",
+                    "id": "b25730ab-8c0f-4a24-a401-570d25ff5a38",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "pitch",
+                    "type": "Value",
+                    "id": "f037fc4d-e6e2-4d40-a344-73cca526db5a",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "yaw",
+                    "type": "Value",
+                    "id": "70b87eb8-1a5c-482d-ba31-7acb293759e8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "throttle",
+                    "type": "Value",
+                    "id": "ffc6cb09-1c11-402b-b97a-2c09c4f75a25",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "camera",
+                    "type": "Value",
+                    "id": "c489a46c-a986-4e29-afed-74bb473d5e2a",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Autopilot",
+                    "type": "Button",
+                    "id": "048ad044-e7c6-43cb-8190-473032c4e092",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "935a0969-ac48-4332-8d94-df127744af81",
+                    "path": "<OculusTouchController>{RightHand}/thumbstick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9c0ff8b-1edd-4241-ab3f-bde67b457236",
+                    "path": "<OculusTouchController>{RightHand}/thumbstick/y",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "",
+                    "action": "pitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a6c8905-f33d-4115-a670-7f32eccee9e2",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "yaw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bdec17b0-cb8d-4b0d-855a-c9d98c1d2517",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "throttle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "209167f5-140a-41d3-8c5d-4c70627e3af7",
+                    "path": "<OculusHMD>/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91e91254-0ebb-4c97-a123-f334cea21ec6",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Autopilot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Scene.unity
     guid: e5e14c378b1e8a3429e9956f8238df79
   - enabled: 1
+    path: Assets/Scenes/MainScene_Draggables_new.unity
+    guid: b0b2adc4d1fb62448ad00e3f6a62a236
+  - enabled: 1
     path: Assets/Scenes/Scena Volo.unity
     guid: c9c6f57621e259946b5ad8b71e82611d
   m_configObjects:

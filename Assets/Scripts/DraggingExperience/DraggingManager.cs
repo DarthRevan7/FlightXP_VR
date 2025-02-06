@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using Unity.XR.CoreUtils;
+using UnityEngine.SceneManagement;
 
 public class DraggingManager : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class DraggingManager : MonoBehaviour
     [SerializeField] private GameObject[] lastObjects;
     [SerializeField] private Vector3 aereoInPezziPosition;
     [SerializeField] private Quaternion aereoInPezziRotation;
+
+
+    [SerializeField] private GameObject startFlight_UI;
+    [SerializeField] private GameObject colorManager;
+    [SerializeField] private GameObject tutorialUI;
+    private FadeEffect fadeEffect;
+    private bool waitingFade = false;
 
 
 
@@ -45,7 +53,11 @@ public class DraggingManager : MonoBehaviour
         materialParts = GetComponentsInChildren<MeshRenderer>();
         highlightMaterial = materialParts[0].material;
 
-        experienceFinished = ExperienceEnded();
+
+        //DECOMMENTARE!!
+        //experienceFinished = ExperienceEnded();
+
+        fadeEffect = Camera.main.gameObject.GetComponent<FadeEffect>();
 
 
         //Modificare il nome del container delle mesh dell'aereo, nel caso in cui sia diverso
@@ -63,12 +75,24 @@ public class DraggingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        experienceFinished = ExperienceEnded();
+        //DECOMMENTARE!!!
+        //experienceFinished = ExperienceEnded();
 
         //Text field di debug.
         statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
         //Debug.Log("Child Count: " + aereoInPezzi.transform.childCount.ToString());
         childCountText.text = "ChildCount: " + aereoInPezzi.transform.childCount.ToString();
+
+
+
+        startFlight_UI.SetActive(experienceFinished);
+
+        if(waitingFade && !fadeEffect.isFading)
+        {
+            tutorialUI.SetActive(true);
+        }
+        
+
     }
 
     //L'esperienza viene fatta ripartire ripristinando il materiale di highlight per tutte le parti
@@ -112,8 +136,36 @@ public class DraggingManager : MonoBehaviour
         {
             materialParts[i].material = material;
         }
+        colorManager.GetComponent<ColorManager>().planeMaterial = material;
+    }
+
+    public TMP_Text testoClick, testoFading;
+
+    //Inizia l'esperienza di volo!
+    public void PreparingFlightXP()
+    {
+
+        testoClick.text = "Pulsante cliccato!";
+        //Fade camera
+        fadeEffect.fadeIn = true;
+
+        //Compare UI con tutorial skippabile ed ulteriore raccomandazione di sedersi
+        //segue un flag x segnalare di attendere che l'effetto di fading si concluda
+        waitingFade = true;
 
         
-        
+
+
+
     }
+
+    public void LoadFlightXP()
+    {
+
+        DontDestroyOnLoad(colorManager);
+        SceneManager.LoadScene(2);
+
+    }
+
+
 }

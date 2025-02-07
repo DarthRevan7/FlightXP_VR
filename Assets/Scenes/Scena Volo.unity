@@ -142,11 +142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978711011308912632, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2703
+      value: 1261
       objectReference: {fileID: 0}
     - target: {fileID: 1978711011308912632, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8647
+      value: 8647.28
       objectReference: {fileID: 0}
     - target: {fileID: 1978711011308912632, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -187,7 +187,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1360008540005982620, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2052622513}
   m_SourcePrefab: {fileID: 100100000, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
 --- !u!1 &1264683242
 GameObject:
@@ -380,6 +383,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1360008540005982620, guid: 0629ae3ff9ea5ba4d81e4a8d4b1134a5, type: 3}
   m_PrefabInstance: {fileID: 529304014}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2052622513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052622512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135108b3c3628c847a92e328a7edd786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane: {fileID: 2052622512}
+  checkDistance: 100
+  collisionDistance: 1
+  directions:
+  - {x: 0, y: -1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: -1, y: 0, z: 0}
+  - {x: 1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: -1}
 --- !u!1001 &6999599512181973745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -431,6 +456,10 @@ PrefabInstance:
     - target: {fileID: 2518822925117784205, guid: a3a6a11c3b41f9649886b27909a7dd5d, type: 3}
       propertyPath: m_Name
       value: Ambiente Volo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140749800836598615, guid: a3a6a11c3b41f9649886b27909a7dd5d, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

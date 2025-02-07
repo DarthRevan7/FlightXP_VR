@@ -17,7 +17,7 @@ public class check_bounds : MonoBehaviour
         PlanePhy2 planePhy2 = plane.GetComponent<PlanePhy2>();
         Vector3 pos = planePhy2.getWorldPosition();
 
-        Debug.Log(pos);
+        //Debug.Log(pos);
 
         // Check if the plane is out of bounds (assuming the x and z coordinates are used for bounds)
         bool isOutOfBounds = pos.x < bound_min.x || pos.x > bound_max.x || pos.z < bound_min.y || pos.z > bound_max.y;

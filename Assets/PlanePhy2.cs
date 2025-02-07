@@ -74,7 +74,7 @@ public class PlanePhy2 : MonoBehaviour
         return w_speed.z; 
     }
 
-    Vector3 offset = Vector3.zero;
+    public Vector3 offset = Vector3.zero;
     public void increaseOffset(Vector3 pos)
     {
         offset += pos;

@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEngine.PlayerLoop;
 
 public class FadeEffect : MonoBehaviour
 {
@@ -19,9 +17,11 @@ public class FadeEffect : MonoBehaviour
 
     void Start()
     {
-        // Inizializza il fade a 0 (trasparente)
-        fadeImage.canvasRenderer.SetAlpha(0);
+        // Inizializza il fade a 1 (Opaco)
+        fadeImage.canvasRenderer.SetAlpha(1.0f);
+        //Attiva il gameobject dell'image x il fading e fa FadeOut ad ogni avvio delle scene, per facilitare la transizione.
         fadeImage.gameObject.SetActive(true);
+        fadeOut=true;
     }
 
     void Update()
@@ -37,8 +37,6 @@ public class FadeEffect : MonoBehaviour
             FadeOut();
             fadeOut=!fadeOut;
         }
-
-
     }
 
     // Funzione per attivare il fade in
@@ -58,8 +56,6 @@ public class FadeEffect : MonoBehaviour
     // Coroutine per eseguire l'effetto di fade
     private IEnumerator FadeTo(float targetAlpha)
     {
-        //Debug
-        GameObject.FindAnyObjectByType<DraggingManager>().testoFading.text = "Sto eseguendo la coroutine";
         
         isFading = true;
         float startAlpha = fadeImage.canvasRenderer.GetAlpha();

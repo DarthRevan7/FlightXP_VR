@@ -265,13 +265,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5632527223694882690, guid: 03d47a8e5a53f084aaea4dd749539528, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 913211509}
   m_SourcePrefab: {fileID: 100100000, guid: 03d47a8e5a53f084aaea4dd749539528, type: 3}
+--- !u!1 &697664946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5632527223694882690, guid: 03d47a8e5a53f084aaea4dd749539528, type: 3}
+  m_PrefabInstance: {fileID: 697664945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &697664947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3322881691002990056, guid: 03d47a8e5a53f084aaea4dd749539528, type: 3}
+  m_PrefabInstance: {fileID: 697664945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697664946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6ad4322c99d9b42b04a43e3d04a102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &913211508 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8726062431445089226, guid: 03d47a8e5a53f084aaea4dd749539528, type: 3}
   m_PrefabInstance: {fileID: 697664945}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &913211509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697664946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5c45908006d3948a0b6b89a2ff3509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 2
+  fadeEffect: {fileID: 697664947}
 --- !u!114 &1150053574 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2141805258481718857, guid: 99b47574f99efad4c9506ca2908d26a3, type: 3}
@@ -416,6 +449,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 913211508}
+    - target: {fileID: 85432127309290384, guid: 99b47574f99efad4c9506ca2908d26a3, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 85432127309290384, guid: 99b47574f99efad4c9506ca2908d26a3, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4075242976138513657, guid: 99b47574f99efad4c9506ca2908d26a3, type: 3}
       propertyPath: m_Pivot.x
       value: 0

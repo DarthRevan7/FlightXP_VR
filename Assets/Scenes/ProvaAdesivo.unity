@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 917dd5779df71234ebb8fe62c484b2ae, type: 2}
+  m_Material: {fileID: 2100000, guid: d03c9261475c39043982bb21fc1ac055, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -839,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 1876257343175372433, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 2028034506208480571, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -863,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 2984079981806157136, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 3102434412306883935, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -875,7 +875,7 @@ PrefabInstance:
     - target: {fileID: 3179474026150545429, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 3272523332241422453, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -883,19 +883,19 @@ PrefabInstance:
     - target: {fileID: 3919857514690828533, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 3973400939596172167, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 4199084289781954193, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 4282041767177935350, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 5279502245277460931, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -907,7 +907,7 @@ PrefabInstance:
     - target: {fileID: 6417043411384799172, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 6963255880103489519, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -919,7 +919,7 @@ PrefabInstance:
     - target: {fileID: 8117092814807968226, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 8144797607324510188, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -931,7 +931,7 @@ PrefabInstance:
     - target: {fileID: 8562431711019356491, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d557859e5c8cb7943b8df7f4bb9867b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 283b0acb889b8084b91db604983f3bf5, type: 2}
     - target: {fileID: 8824099220229473475, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -940,7 +940,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 509840882569354252, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 1565171217}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaf3872e3c478a641950baab57ea9b04, type: 3}
@@ -959,9 +959,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1095555812}
   - component: {fileID: 1095555813}
-  - component: {fileID: 1095555814}
   m_Layer: 0
-  m_Name: Decal Projector Fusoliera
+  m_Name: Decal Projector Fusoliera Sx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1006,19 +1005,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: -0.023993647, z: 0.86718535}
   m_Size: {x: 1, y: 1, z: 0.26515388}
   m_FadeFactor: 1
---- !u!114 &1095555814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095555811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ebc46b39e96844ba8c34a464e2f7b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sticker: {fileID: 0}
 --- !u!1 &1160234425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1182,7 @@ GameObject:
   - component: {fileID: 1402137827}
   - component: {fileID: 1402137828}
   m_Layer: 0
-  m_Name: Decal Projector Fusoliera (1)
+  m_Name: Decal Projector Fusoliera Dx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1229,7 +1215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 917dd5779df71234ebb8fe62c484b2ae, type: 2}
+  m_Material: {fileID: 2100000, guid: ce859a328881e0045ac959c27d6508e6, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -1378,7 +1364,7 @@ Transform:
   m_GameObject: {fileID: 1565171216}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.3883214, y: 0.7607436, z: 2.9300013}
+  m_LocalPosition: {x: 2.3883214, y: 0.7607441, z: 2.9300017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

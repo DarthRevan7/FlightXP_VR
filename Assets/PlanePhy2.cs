@@ -42,9 +42,16 @@ public class PlanePhy2 : MonoBehaviour
         }
     }
 
+
+    public float autopilot_delay = 1.0f;
+    private float last_autopilot_change_time;
     public void ToggleAutopilot()
     {
-        autopilotEngaged = !autopilotEngaged;
+        if(Time.time - last_autopilot_change_time > 1.0f)
+        {
+            last_autopilot_change_time = Time.time;
+            autopilotEngaged = !autopilotEngaged;
+        }
     }
 
     public float getAltitude()

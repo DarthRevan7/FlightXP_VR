@@ -23,6 +23,7 @@ public class PlaneCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
 
         // Lock the cursor to the center of the screen and make it invisible
         Cursor.lockState = CursorLockMode.Locked;

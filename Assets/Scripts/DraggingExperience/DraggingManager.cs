@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using Unity.XR.CoreUtils;
+using UnityEngine.SceneManagement;
 
 public class DraggingManager : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class DraggingManager : MonoBehaviour
     [SerializeField] private GameObject[] lastObjects;
     [SerializeField] private Vector3 aereoInPezziPosition;
     [SerializeField] private Quaternion aereoInPezziRotation;
+
+
+    [SerializeField] private GameObject startFlight_UI;
+    [SerializeField] private GameObject colorManager;
+    [SerializeField] private GameObject tutorialUI;
+    private FadeEffect fadeEffect;
+    private bool waitingFade = false;
 
 
 
@@ -45,7 +53,11 @@ public class DraggingManager : MonoBehaviour
         materialParts = GetComponentsInChildren<MeshRenderer>();
         highlightMaterial = materialParts[0].material;
 
+
+        //DECOMMENTARE!!
         experienceFinished = ExperienceEnded();
+
+        fadeEffect = Camera.main.gameObject.GetComponent<FadeEffect>();
 
 
         //Modificare il nome del container delle mesh dell'aereo, nel caso in cui sia diverso
@@ -63,12 +75,24 @@ public class DraggingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //DECOMMENTARE!!!
         experienceFinished = ExperienceEnded();
 
         //Text field di debug.
-        statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
+        //statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
         //Debug.Log("Child Count: " + aereoInPezzi.transform.childCount.ToString());
-        childCountText.text = "ChildCount: " + aereoInPezzi.transform.childCount.ToString();
+        //childCountText.text = "ChildCount: " + aereoInPezzi.transform.childCount.ToString();
+
+
+
+        startFlight_UI.SetActive(experienceFinished);
+
+        if(waitingFade && !fadeEffect.isFading)
+        {
+            tutorialUI.SetActive(true);
+        }
+        
+
     }
 
     //L'esperienza viene fatta ripartire ripristinando il materiale di highlight per tutte le parti
@@ -100,4 +124,22 @@ public class DraggingManager : MonoBehaviour
         return false;
         
     }
+
+    public bool GetExperienceFinished()
+    {
+        return experienceFinished;
+    }
+
+    public void SetPlaneMaterial(Material material)
+    {
+        for(int i = 0; i < materialParts.Length; i++)
+        {
+            materialParts[i].material = material;
+        }
+        colorManager.GetComponent<ColorManager>().planeMaterial = material;
+    }
+
+    
+
+
 }

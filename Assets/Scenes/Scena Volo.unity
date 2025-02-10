@@ -248,9 +248,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1264683242
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5632527223694882690, guid: 03d47a8e5a53f084aaea4dd749539528, type: 3}
+  m_PrefabInstance: {fileID: 697664945}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -296,9 +295,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1264683245
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2141805258481718857, guid: 99b47574f99efad4c9506ca2908d26a3, type: 3}
+  m_PrefabInstance: {fileID: 2352652768530809921}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264683242}
   m_Enabled: 1

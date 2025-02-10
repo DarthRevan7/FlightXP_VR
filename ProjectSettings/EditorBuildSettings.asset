@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Scene.unity
     guid: e5e14c378b1e8a3429e9956f8238df79
   - enabled: 1
+    path: Assets/Scenes/Scena Terra.unity
+    guid: 351752b4dc96d3545b528a6ab5605ea3
+  - enabled: 1
+    path: Assets/Scenes/Transition Scenes/Transition_ToFlight.unity
+    guid: d399a29e650949e44bebcb473717a726
+  - enabled: 1
     path: Assets/Scenes/Scena Volo.unity
     guid: c9c6f57621e259946b5ad8b71e82611d
+  - enabled: 1
+    path: Assets/Scenes/Transition Scenes/Transition_FromFlight.unity
+    guid: fc67863514e82334abd2be053ba6d47f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e452bac8ffba3394693e1b8bd76a977e, type: 2}

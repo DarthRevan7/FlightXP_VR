@@ -12,6 +12,8 @@ public class TerrainCollisionDetector : MonoBehaviour
 
     public bool danger = false;
 
+    private bool called = false;    
+
     void Update()
     {
         danger = false;
@@ -25,9 +27,11 @@ public class TerrainCollisionDetector : MonoBehaviour
                     //Debug.Log($"Collided with terrain! {hit.distance} in direction {direction}");
                     if (hit.distance < dangerDistance) danger = true;
 
-                    if (hit.distance < collisionDistance)
+                    if (hit.distance < collisionDistance && !called)
                     {
-                        Debug.Log("Collision!!");
+                        //Debug.Log("Collision!!");
+                        GetComponent<ExplosionManager>().Explode();
+                        called = true;
                     }
                 }
             }

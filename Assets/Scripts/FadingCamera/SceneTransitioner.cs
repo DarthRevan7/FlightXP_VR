@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 public class SceneTransitioner : MonoBehaviour
 {
 
-    [SerializeField] private int sceneIndex;
+    [SerializeField] private string sceneName;
     [SerializeField] private FadeEffect fadeEffect;
+
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +16,8 @@ public class SceneTransitioner : MonoBehaviour
         fadeEffect = GameObject.FindAnyObjectByType<FadeEffect>();
 
         fadeEffect.fadeOut=true;
+
+        
     }
 
     // Update is called once per frame
@@ -21,8 +25,6 @@ public class SceneTransitioner : MonoBehaviour
     {
         
     }
-
-    
 
     public void StartTransition()
     {
@@ -40,7 +42,7 @@ public class SceneTransitioner : MonoBehaviour
         if(fadeEffect.isFading)
         {
             yield return new WaitUntil( () => !fadeEffect.isFading );
-            SceneManager.LoadScene(sceneIndex);
+            SceneManager.LoadScene(sceneName);
         }
 
     }

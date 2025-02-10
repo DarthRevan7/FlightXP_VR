@@ -505,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016695539665321116, guid: d2b8cf693fd80264e839db6d9f856a0f, type: 3}
       propertyPath: m_Name
-      value: StartFlightUI (1)
+      value: BackToHangarUI
       objectReference: {fileID: 0}
     - target: {fileID: 5195829000794659022, guid: d2b8cf693fd80264e839db6d9f856a0f, type: 3}
       propertyPath: m_text
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 1076945459}
   - component: {fileID: 1076945458}
   m_Layer: 0
-  m_Name: UI_VirtualReality
+  m_Name: UI_TransitionFromFlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5c45908006d3948a0b6b89a2ff3509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 3
+  sceneName: 
   fadeEffect: {fileID: 0}
 --- !u!4 &1076945459
 Transform:
@@ -1753,6 +1753,10 @@ PrefabInstance:
     - target: {fileID: 7702021114299653146, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+      propertyPath: sceneName
+      value: Scena_Terra
       objectReference: {fileID: 0}
     - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
       propertyPath: sceneIndex

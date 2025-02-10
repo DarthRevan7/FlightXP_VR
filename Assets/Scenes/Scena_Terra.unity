@@ -1438,6 +1438,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -23
       objectReference: {fileID: 0}
+    - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+      propertyPath: sceneName
+      value: Transition_ToFlight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

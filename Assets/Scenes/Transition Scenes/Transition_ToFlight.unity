@@ -1671,6 +1671,10 @@ PrefabInstance:
       value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+      propertyPath: sceneName
+      value: Scena_Volo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
       propertyPath: sceneIndex
       value: 3
       objectReference: {fileID: 0}

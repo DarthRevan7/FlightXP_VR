@@ -30,8 +30,7 @@ public class TerrainCollisionDetector : MonoBehaviour
                     if (hit.distance < collisionDistance && !called)
                     {
                         //Debug.Log("Collision!!");
-                        GetComponent<ExplosionManager>().Explode();
-                        called = true;
+                        
                     }
                 }
             }

@@ -78,3 +78,7 @@ crashlytics-build.properties
 #Ignora la cartella Asset/Team_UnityPackages
 /[Aa]ssets/Team_UnityPackages/*
 !/[Aa]ssets/Team_UnityPackages/
+
+
+#Ignora la cartella utmp
+.utmp/*

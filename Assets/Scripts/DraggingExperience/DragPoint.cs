@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using Unity.VRTemplate;
 
 
 
@@ -23,6 +24,7 @@ public class DragPoint : MonoBehaviour
     [SerializeField] private List<GameObject> UICards = new List<GameObject>();
     //Indice della UI card relativo alla parte di aereo a cui è attaccato questo script.
     [SerializeField] private int UICardIndex;
+    [SerializeField] private StepManager stepManagerUI;
     
 
     private void OnCollisionEnter(Collision other) {
@@ -31,8 +33,10 @@ public class DragPoint : MonoBehaviour
         otherName = other.gameObject.name;
         thisName = gameObject.name;
 
+        
+
         //Riga x debug, si può eliminare o commentare
-        textArea.text = "Colliso con: " + other.gameObject.name;
+        //textArea.text = "Colliso con: " + other.gameObject.name;
 
         //Se il nome degli oggetti che sto confrontando corrisponde, allora cambio il materiale
         //dell'oggetto con script DragPoint e distruggo l'altro oggetto.
@@ -46,6 +50,7 @@ public class DragPoint : MonoBehaviour
             {
                 activeElement.SetActive(false);
                 UICards[UICardIndex].SetActive(true);
+                stepManagerUI.SetCurrentStepIndex(UICardIndex);
             }
 
 
@@ -54,13 +59,17 @@ public class DragPoint : MonoBehaviour
 
     private GameObject ReturnActiveElement()
     {
+        
         foreach(GameObject go in UICards)
         {
             if(go.activeInHierarchy)
             {
+                
                 return go;
             }
+            
         }
+        
         return null;
     }
 }

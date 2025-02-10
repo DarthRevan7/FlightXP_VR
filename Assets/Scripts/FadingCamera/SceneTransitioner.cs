@@ -43,9 +43,5 @@ public class SceneTransitioner : MonoBehaviour
             SceneManager.LoadScene(sceneIndex);
         }
 
-
-
-
-
     }
 }

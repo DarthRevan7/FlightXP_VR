@@ -55,7 +55,7 @@ public class DraggingManager : MonoBehaviour
 
 
         //DECOMMENTARE!!
-        //experienceFinished = ExperienceEnded();
+        experienceFinished = ExperienceEnded();
 
         fadeEffect = Camera.main.gameObject.GetComponent<FadeEffect>();
 
@@ -76,12 +76,12 @@ public class DraggingManager : MonoBehaviour
     void Update()
     {
         //DECOMMENTARE!!!
-        //experienceFinished = ExperienceEnded();
+        experienceFinished = ExperienceEnded();
 
         //Text field di debug.
-        statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
+        //statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
         //Debug.Log("Child Count: " + aereoInPezzi.transform.childCount.ToString());
-        childCountText.text = "ChildCount: " + aereoInPezzi.transform.childCount.ToString();
+        //childCountText.text = "ChildCount: " + aereoInPezzi.transform.childCount.ToString();
 
 
 
@@ -139,33 +139,7 @@ public class DraggingManager : MonoBehaviour
         colorManager.GetComponent<ColorManager>().planeMaterial = material;
     }
 
-    public TMP_Text testoClick, testoFading;
-
-    //Inizia l'esperienza di volo!
-    public void PreparingFlightXP()
-    {
-
-        testoClick.text = "Pulsante cliccato!";
-        //Fade camera
-        fadeEffect.fadeIn = true;
-
-        //Compare UI con tutorial skippabile ed ulteriore raccomandazione di sedersi
-        //segue un flag x segnalare di attendere che l'effetto di fading si concluda
-        waitingFade = true;
-
-        
-
-
-
-    }
-
-    public void LoadFlightXP()
-    {
-
-        DontDestroyOnLoad(colorManager);
-        SceneManager.LoadScene(2);
-
-    }
+    
 
 
 }

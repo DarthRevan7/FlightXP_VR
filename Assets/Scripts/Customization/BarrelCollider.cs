@@ -34,7 +34,7 @@ public class BarrelCollider : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //Se ho colpito l'aereo
-        if(other.gameObject.tag.Equals("PlanePart"))
+        if(other.gameObject.tag.Equals("PlanePart") && draggingManager.GetExperienceFinished())
         {
             /*
             if(draggingManager.GetExperienceFinished())

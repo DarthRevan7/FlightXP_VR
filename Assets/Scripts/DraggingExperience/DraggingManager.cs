@@ -11,7 +11,7 @@ public class DraggingManager : MonoBehaviour
     
     [SerializeField] private MeshRenderer[] materialParts;
     [SerializeField] private Material highlightMaterial;
-    [SerializeField] private bool experienceFinished = false;
+    [SerializeField] public bool experienceFinished = false;
     [SerializeField] private TMP_Text statoEsperienzaText, childCountText;
 
     [SerializeField] private GameObject aereoInPezzi, aereoInPezziPrefab;

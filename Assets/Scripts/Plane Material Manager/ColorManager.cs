@@ -42,7 +42,7 @@ public class ColorManager : MonoBehaviour
             {
                 GameObject aereoPezzi = GameObject.Find("Aereo_InPezzi");
                 DraggingManager draggingManager = GameObject.Find("Aereo_NoPhysics").GetComponent<DraggingManager>();
-
+                draggingManager.experienceFinished = true;
                 GameObject.Destroy(aereoPezzi);
                 draggingManager.SetPlaneMaterial(planeMaterial);
 

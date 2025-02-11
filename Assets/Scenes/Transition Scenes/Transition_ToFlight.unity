@@ -1417,6 +1417,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5180937209541457482}
+    - target: {fileID: 7391438977162804972, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391438977162804972, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTransitioner2, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1678,6 +1686,10 @@ PrefabInstance:
       propertyPath: sceneIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+      propertyPath: sceneName
+      value: Scena_Volo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1685,13 +1697,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
 --- !u!114 &5180937209541457482 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
   m_PrefabInstance: {fileID: 5180937209541457481}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5c45908006d3948a0b6b89a2ff3509, type: 3}
+  m_Script: {fileID: 11500000, guid: 14b4be4848708b14e9df6c9bdef6b30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

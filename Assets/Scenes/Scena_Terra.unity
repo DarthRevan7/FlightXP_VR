@@ -1442,6 +1442,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: Transition_ToFlight
       objectReference: {fileID: 0}
+    - target: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+      propertyPath: sceneName
+      value: Transition_ToFlight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1454,13 +1458,13 @@ Camera:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1219110615 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
   m_PrefabInstance: {fileID: 1219110613}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5c45908006d3948a0b6b89a2ff3509, type: 3}
+  m_Script: {fileID: 11500000, guid: 14b4be4848708b14e9df6c9bdef6b30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1535046438
@@ -1679,6 +1683,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1219110615}
+    - target: {fileID: 8244614392428466464, guid: ca28e36ba95bc8048b58c97fabefa674, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244614392428466464, guid: ca28e36ba95bc8048b58c97fabefa674, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTransitioner2, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8580804952477819059, guid: ca28e36ba95bc8048b58c97fabefa674, type: 3}
       propertyPath: m_Name
       value: BuildingXP

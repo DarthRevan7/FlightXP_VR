@@ -212,8 +212,8 @@ GameObject:
   - component: {fileID: 1233378071312387164}
   - component: {fileID: 5892969088437043993}
   - component: {fileID: 1977416794546584327}
-  - component: {fileID: 8911047049489551204}
-  - component: {fileID: 8870194564808022819}
+  - component: {fileID: 1257901804195029064}
+  - component: {fileID: 1819615450774904653}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -358,7 +358,7 @@ MonoBehaviour:
   camera_input: {fileID: -8967400262048014999, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
   vr: 1
   sensitivity: 0.1
---- !u!114 &8911047049489551204
+--- !u!114 &1257901804195029064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,15 +367,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4728516993171116578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6ad4322c99d9b42b04a43e3d04a102, type: 3}
+  m_Script: {fileID: 11500000, guid: 968754346b90de24a9f0379614764d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggle_fade_input: {fileID: 0}
   fadeImage: {fileID: 7525125513382769052}
   fadeDuration: 1
   isFading: 0
-  fadeIn: 0
-  fadeOut: 0
---- !u!114 &8870194564808022819
+  targetAlpha: 0
+--- !u!114 &1819615450774904653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -384,11 +384,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4728516993171116578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5c45908006d3948a0b6b89a2ff3509, type: 3}
+  m_Script: {fileID: 11500000, guid: 14b4be4848708b14e9df6c9bdef6b30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Transition_FromFlight
   fadeEffect: {fileID: 0}
+  transition: 0
 --- !u!1 &6374149514796783195
 GameObject:
   m_ObjectHideFlags: 0

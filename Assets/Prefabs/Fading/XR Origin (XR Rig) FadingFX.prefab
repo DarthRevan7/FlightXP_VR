@@ -5387,7 +5387,7 @@ GameObject:
   - component: {fileID: 4806897792463238250}
   - component: {fileID: 1498186749469552524}
   - component: {fileID: 5378302556740675311}
-  - component: {fileID: 9161073145265920470}
+  - component: {fileID: 7684459958123675660}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5614,7 +5614,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &9161073145265920470
+--- !u!114 &7684459958123675660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5623,14 +5623,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4806897792463238254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6ad4322c99d9b42b04a43e3d04a102, type: 3}
+  m_Script: {fileID: 11500000, guid: 968754346b90de24a9f0379614764d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggle_fade_input: {fileID: 0}
   fadeImage: {fileID: 2270126752302241597}
   fadeDuration: 1
   isFading: 0
-  fadeIn: 0
-  fadeOut: 0
+  targetAlpha: 0
 --- !u!1 &4974990924242253429
 GameObject:
   m_ObjectHideFlags: 0
@@ -8389,7 +8389,7 @@ GameObject:
   - component: {fileID: 1786014175416021648}
   - component: {fileID: 1328500005414668334}
   - component: {fileID: 535417721490297214}
-  - component: {fileID: 8200467885245384200}
+  - component: {fileID: 8586113717398940862}
   m_Layer: 2
   m_Name: XR Origin (XR Rig) FadingFX
   m_TagString: Untagged
@@ -8527,7 +8527,7 @@ MonoBehaviour:
   m_AimAssistRequiredSpeed: 0.25
   m_AimAssistPercent: 0.8
   m_AimAssistMaxSpeedPercent: 10
---- !u!114 &8200467885245384200
+--- !u!114 &8586113717398940862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8536,11 +8536,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6152742278629502258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5c45908006d3948a0b6b89a2ff3509, type: 3}
+  m_Script: {fileID: 11500000, guid: 14b4be4848708b14e9df6c9bdef6b30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 2
-  fadeEffect: {fileID: 9161073145265920470}
+  sceneName: 
+  fadeEffect: {fileID: 0}
+  transition: 0
 --- !u!1 &6256330144640664447
 GameObject:
   m_ObjectHideFlags: 0

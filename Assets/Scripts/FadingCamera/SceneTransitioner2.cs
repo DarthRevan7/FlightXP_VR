@@ -37,6 +37,7 @@ public class SceneTransitioner2 : MonoBehaviour
     {
         transitioning = true;
         fadeEffect.targetAlpha = 1.0f;
+        fadeEffect.isFading = true;
     }
 
     // private IEnumerator SceneTransitioning()

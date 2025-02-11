@@ -2410,19 +2410,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -23
       objectReference: {fileID: 0}
-    - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+    - target: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
       propertyPath: sceneName
       value: Scena_Terra
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
-      propertyPath: sceneIndex
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+--- !u!114 &1722105879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+  m_PrefabInstance: {fileID: 1722105878}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4be4848708b14e9df6c9bdef6b30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1935388175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,9 +3068,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1935388181}
-        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
-        m_MethodName: StartXP
+      - m_Target: {fileID: 1722105879}
+        m_TargetAssemblyTypeName: SceneTransitioner2, Assembly-CSharp
+        m_MethodName: StartTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

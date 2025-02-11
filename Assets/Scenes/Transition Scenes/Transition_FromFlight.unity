@@ -197,17 +197,6 @@ Transform:
   - {fileID: 2074176687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &475281850 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2270126752302241597, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
-  m_PrefabInstance: {fileID: 5180937209541457481}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &490600096
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,14 +450,14 @@ PrefabInstance:
     - target: {fileID: 2049330477674543034, guid: d2b8cf693fd80264e839db6d9f856a0f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5180937209541457482}
     - target: {fileID: 2049330477674543034, guid: d2b8cf693fd80264e839db6d9f856a0f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartTransition
       objectReference: {fileID: 0}
     - target: {fileID: 2049330477674543034, guid: d2b8cf693fd80264e839db6d9f856a0f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneTransitioner, Assembly-CSharp
+      value: SceneTransitioner2, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3424089570964318042, guid: d2b8cf693fd80264e839db6d9f856a0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -798,7 +787,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076945459}
-  - component: {fileID: 1076945460}
   m_Layer: 0
   m_Name: UI_TransitionFromFlight
   m_TagString: Untagged
@@ -822,21 +810,6 @@ Transform:
   - {fileID: 724972086}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1076945460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076945457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b4be4848708b14e9df6c9bdef6b30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Scena_Terra
-  fadeEffect: {fileID: 0}
-  transition: 0
 --- !u!1 &1200847635
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,28 +918,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200847635}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1239525508 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4806897792463238254, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
-  m_PrefabInstance: {fileID: 5180937209541457481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1239525515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239525508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 968754346b90de24a9f0379614764d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggle_fade_input: {fileID: 0}
-  fadeImage: {fileID: 475281850}
-  fadeDuration: 1
-  isFading: 0
-  targetAlpha: 0
 --- !u!1 &1242083068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,8 +1744,16 @@ PrefabInstance:
       value: Scena_Terra
       objectReference: {fileID: 0}
     - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+      propertyPath: fadeEffect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
       propertyPath: sceneIndex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+      propertyPath: sceneName
+      value: Scena_Terra
       objectReference: {fileID: 0}
     - target: {fileID: 9161073145265920470, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
       propertyPath: fadeIn
@@ -1806,13 +1765,22 @@ PrefabInstance:
       objectReference: {fileID: 1945596340158229729, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
     m_RemovedComponents:
     - {fileID: 9161073145265920470, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+    - {fileID: 8200467885245384200, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4806897792463238254, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1239525515}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+--- !u!114 &5180937209541457482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8586113717398940862, guid: 6387fb9d4d939fc4e9b0e677033765b6, type: 3}
+  m_PrefabInstance: {fileID: 5180937209541457481}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4be4848708b14e9df6c9bdef6b30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

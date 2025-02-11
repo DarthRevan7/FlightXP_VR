@@ -33,7 +33,7 @@ public class PlaneCollider : MonoBehaviour
         if(collider.tag.Equals("Collision"))
         {
             GetComponent<ExplosionManager>().Explode();
-            GameObject.FindAnyObjectByType<SceneTransitioner>().StartTransition();
+            GameObject.FindAnyObjectByType<SceneTransitioner2>().StartTransition();
         }
         
 

@@ -20,9 +20,13 @@ public class PlanePhy2 : MonoBehaviour
     [SerializeField]
     private InputActionReference roll, pitch, yaw, throttle, autopilot;
 
+    private AudioManager audioManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioManager = GameObject.FindAnyObjectByType<AudioManager>();
+
         model.initAviaB534();
 
         model.Position = new  Vector3(transform.position.z, transform.position.x, -transform.position.y);
@@ -51,6 +55,8 @@ public class PlanePhy2 : MonoBehaviour
         {
             last_autopilot_change_time = Time.time;
             autopilotEngaged = !autopilotEngaged;
+
+            audioManager.PlayAutopilot(autopilotEngaged);
         }
     }
 

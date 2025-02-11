@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class PlaneCollider : MonoBehaviour
 {
+
+    private bool exploded = false;
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,10 +36,12 @@ public class PlaneCollider : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         
-        if(collider.tag.Equals("Collision"))
+        if(collider.tag.Equals("Collision") && !exploded)
         {
             GetComponent<ExplosionManager>().Explode();
             GameObject.FindAnyObjectByType<SceneTransitioner2>().StartTransition();
+            GameObject.Find("Esplosione").GetComponent<AudioSource>().Play();
+            exploded = true;
         }
         
 

@@ -113,6 +113,8 @@ public class PlanePhy2 : MonoBehaviour
         if (throttle.action.ReadValue<float>() != 0) 
         {
             throttle_in = throttle.action.ReadValue<float>();
+            if(throttle_in>0.0f) throttle_in = 1.0f;
+            else throttle_in = -1.0f;
         }
 
 

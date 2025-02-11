@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        throttle.volume = fisicaAereo.getThrottle();
+        throttle.volume = fisicaAereo.getThrottle()/4.0f+0.25f;
 
         if(terrainCollisionDetector.danger && !danger.isPlaying)
         {

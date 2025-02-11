@@ -26,6 +26,8 @@ public class DraggingManager : MonoBehaviour
     private FadeEffect fadeEffect;
     private bool waitingFade = false;
 
+    [SerializeField] private AudioSource audioSource;
+
 
 
     /*
@@ -70,13 +72,20 @@ public class DraggingManager : MonoBehaviour
         //sistemare, in modo da fornire un feedback corretto riguardo alla fine dell'esperienza
         //di dragging.
         lastObjects = new GameObject[2];
+
+        audioSource = GameObject.Find("CompletamentoAereo").GetComponent<AudioSource>();    
     }
 
     // Update is called once per frame
     void Update()
     {
         //DECOMMENTARE!!!
-        experienceFinished = ExperienceEnded();
+        if(!experienceFinished && ExperienceEnded())
+        {
+            experienceFinished = true;
+            audioSource.Play();
+            colorManager.GetComponent<ColorManager>().experienceDone = true;
+        }
 
         //Text field di debug.
         //statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();

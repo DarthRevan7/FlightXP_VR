@@ -12,6 +12,7 @@ public class BarrelCollider : MonoBehaviour
     [SerializeField] private Color splashColor;
     [SerializeField] private float timeToDestruction = 2f;
     [SerializeField] private Vector3 startingPosition;
+    [SerializeField] private AudioSource audioSource;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,6 +20,8 @@ public class BarrelCollider : MonoBehaviour
     {
         draggingManager = GameObject.FindAnyObjectByType<DraggingManager>();
         startingPosition = transform.position;
+
+        audioSource = GameObject.Find("ApplicazioneVernice").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,6 +52,8 @@ public class BarrelCollider : MonoBehaviour
             GameObject.Destroy(splash, timeToDestruction);
 
             transform.position = startingPosition;
+
+            audioSource.Play();
         }
     }
 

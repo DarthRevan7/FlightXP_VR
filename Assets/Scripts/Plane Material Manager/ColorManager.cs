@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ColorManager : MonoBehaviour
 {
+    public static ColorManager colorManager;
     //Deve essere settato all'inizio col Materiale dell'aereo nella scena.
     public Material planeMaterial;
     public bool experienceDone = false;
@@ -14,7 +15,16 @@ public class ColorManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this);
+        // DontDestroyOnLoad(this);
+        if(colorManager != null && colorManager != this) 
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            colorManager = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void OnEnable()
@@ -81,6 +91,11 @@ public class ColorManager : MonoBehaviour
                         renderers[i].materials = materials;
                         
                         
+                    }
+
+                    foreach(DragPoint dp in aereoNoPhysics.GetComponentsInChildren<DragPoint>())
+                    {
+                        dp.CoverPanelDeactivate();
                     }
                 }
             }

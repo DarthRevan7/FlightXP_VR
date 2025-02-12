@@ -35,14 +35,13 @@ public class DecalCollider : MonoBehaviour
     {
         //Se ho colpito l'aereo
         //&& GameObject.FindAnyObjectByType<ColorManager>().experienceDone
-        if(other.gameObject.tag.Equals("PlanePart") && GameObject.FindAnyObjectByType<ColorManager>().experienceDone)
+        if(other.gameObject.tag.Equals("PlanePart") && ColorManager.colorManager.experienceDone)
         {
-            
-            ColorManager colorManager = GameObject.FindAnyObjectByType<ColorManager>();
+        
+            ColorManager.colorManager.ChangeDecalMaterial(decalMaterial);
 
-            colorManager.ChangeDecalMaterial(decalMaterial);
-
-            
+            GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
             transform.position = startingPosition;
 

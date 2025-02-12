@@ -33,7 +33,11 @@ public class DragPoint : MonoBehaviour
         audioSource = GameObject.Find("OggettoPosizionatoBene").GetComponent<AudioSource>();
     }
 
+    public void CoverPanelDeactivate()
+    {
+                    coverPanel.SetActive(false);
 
+    }
     private void OnCollisionEnter(Collision other) {
         //Ricavo le stringhe dei nomi dei gameobjects
         string otherName, thisName;

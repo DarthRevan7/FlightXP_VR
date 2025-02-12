@@ -35,7 +35,7 @@ public class BarrelCollider : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //Se ho colpito l'aereo
-        if(other.gameObject.tag.Equals("PlanePart") && GameObject.FindAnyObjectByType<ColorManager>().experienceDone)
+        if(other.gameObject.tag.Equals("PlanePart") && ColorManager.colorManager.experienceDone)
         {
             /*
             if(draggingManager.GetExperienceFinished())
@@ -53,6 +53,8 @@ public class BarrelCollider : MonoBehaviour
             GameObject.Destroy(splash, timeToDestruction);
 
             transform.position = startingPosition;
+            GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
             audioSource.Play();
         }

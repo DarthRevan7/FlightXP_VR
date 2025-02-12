@@ -21,7 +21,7 @@ public class DraggingManager : MonoBehaviour
 
 
     [SerializeField] private GameObject startFlight_UI;
-    [SerializeField] private GameObject colorManager;
+    // [SerializeField] private GameObject colorManager;
     [SerializeField] private GameObject tutorialUI;
     private FadeEffect fadeEffect;
     private bool waitingFade = false;
@@ -87,7 +87,7 @@ public class DraggingManager : MonoBehaviour
         {
             experienceFinished = true;
             //audioSource.Play();
-            colorManager.GetComponent<ColorManager>().experienceDone = true;
+            ColorManager.colorManager.experienceDone = true;
         }
 
         if(terminateXP)
@@ -169,7 +169,7 @@ public class DraggingManager : MonoBehaviour
         {
             materialParts[i].material = material;
         }
-        colorManager.GetComponent<ColorManager>().planeMaterial = material;
+        ColorManager.colorManager.planeMaterial = material;
     }
 
 

@@ -50,24 +50,38 @@ public class ColorManager : MonoBehaviour
     {
         decalMaterial = material;
 
-        if(decalProjectors != null)
+        if(decalMaterial != null)
         {
-            Debug.Log("decalproj not null");
-            //Se il materiale è null
-            if(decalMaterial == null)
+            if(SceneManager.GetActiveScene().name.Equals("Scena_Volo"))
             {
-                //Disattiva l'oggetto proiettore decal
-                decalProjectors.SetActive(false);
-            }
-            else
-            {
-                decalProjectors.SetActive(true);
+                GameObject aereo = GameObject.Find("aereo");
 
-                //Aggiorna il materiale del decal dell'aereo
-                DecalProjector[] projectors = decalProjectors.GetComponentsInChildren<DecalProjector>();
-                for(int i = 0; i < projectors.Length; i++)
+                if(aereo != null)
                 {
-                    projectors[i].material = decalMaterial;
+                    Material []materials = aereo.GetComponent<MeshRenderer>().materials;
+                    materials[1] = decalMaterial;
+                    aereo.GetComponent<MeshRenderer>().materials = materials;
+                }
+            }
+            else if(SceneManager.GetActiveScene().name.Equals("Scena_Terra"))
+            {
+                GameObject aereoNoPhysics = GameObject.Find("Aereo_NoPhysics");
+
+                if(aereoNoPhysics != null && experienceDone)
+                {
+                    
+                    MeshRenderer[] renderers = aereoNoPhysics.GetComponentsInChildren<MeshRenderer>();
+                    Material []materials = new Material[2];//renderers[0].materials;
+
+                    materials[0] = planeMaterial;
+                    materials[1] = decalMaterial;
+                    
+                    for(int i = 0; i < renderers.Length; i++)
+                    {
+                        renderers[i].materials = materials;
+                        
+                        
+                    }
                 }
             }
         }
@@ -85,7 +99,7 @@ public class ColorManager : MonoBehaviour
                 DraggingManager draggingManager = GameObject.Find("Aereo_NoPhysics").GetComponent<DraggingManager>();
                 draggingManager.experienceFinished = true;
                 GameObject.Destroy(aereoPezzi);
-                draggingManager.SetPlaneMaterial(planeMaterial);
+                //draggingManager.SetPlaneMaterial(planeMaterial);
 
             }
         }

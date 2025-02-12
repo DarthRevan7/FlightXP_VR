@@ -13,6 +13,7 @@ public class BarrelCollider : MonoBehaviour
     [SerializeField] private float timeToDestruction = 2f;
     [SerializeField] private Vector3 startingPosition;
     [SerializeField] private AudioSource audioSource;
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,7 +35,7 @@ public class BarrelCollider : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //Se ho colpito l'aereo
-        if(other.gameObject.tag.Equals("PlanePart") && draggingManager.GetExperienceFinished())
+        if(other.gameObject.tag.Equals("PlanePart") && GameObject.FindAnyObjectByType<ColorManager>().experienceDone)
         {
             /*
             if(draggingManager.GetExperienceFinished())

@@ -29,6 +29,9 @@ public class DraggingManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
 
+    [SerializeField] public bool terminateXP;
+
+
 
     /*
     
@@ -83,8 +86,14 @@ public class DraggingManager : MonoBehaviour
         if(!experienceFinished && ExperienceEnded())
         {
             experienceFinished = true;
-            audioSource.Play();
+            //audioSource.Play();
             colorManager.GetComponent<ColorManager>().experienceDone = true;
+        }
+
+        if(terminateXP)
+        {
+            TerminateXP();
+            terminateXP = false;
         }
 
         //Text field di debug.
@@ -100,6 +109,8 @@ public class DraggingManager : MonoBehaviour
         {
             tutorialUI.SetActive(true);
         }
+
+
         
 
     }
@@ -123,6 +134,7 @@ public class DraggingManager : MonoBehaviour
     //gameobject container.
     private bool ExperienceEnded()
     {
+        if(aereoInPezzi==null) return true;
         if(aereoInPezzi.transform.childCount == 2)
         {
             lastObjects[0] = aereoInPezzi.transform.GetChild(aereoInPezzi.transform.childCount -1).gameObject;
@@ -132,6 +144,18 @@ public class DraggingManager : MonoBehaviour
             return true;
         return false;
         
+    }
+
+    public void TerminateXP()
+    {
+        Debug.Log("term1");
+        if(aereoInPezzi != null)
+        {
+                    Debug.Log("term2");
+
+            SetPlaneMaterial(aereoInPezzi.transform.GetChild(0).GetComponent<MeshRenderer>().material);
+            Destroy(aereoInPezzi);
+        }
     }
 
     public bool GetExperienceFinished()
@@ -147,6 +171,8 @@ public class DraggingManager : MonoBehaviour
         }
         colorManager.GetComponent<ColorManager>().planeMaterial = material;
     }
+
+
 
     
 

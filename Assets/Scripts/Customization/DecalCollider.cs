@@ -34,7 +34,8 @@ public class DecalCollider : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //Se ho colpito l'aereo
-        if(other.gameObject.tag.Equals("PlanePart") && draggingManager.GetExperienceFinished())
+        //&& GameObject.FindAnyObjectByType<ColorManager>().experienceDone
+        if(other.gameObject.tag.Equals("PlanePart") && GameObject.FindAnyObjectByType<ColorManager>().experienceDone)
         {
             
             ColorManager colorManager = GameObject.FindAnyObjectByType<ColorManager>();

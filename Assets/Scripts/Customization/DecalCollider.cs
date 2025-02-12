@@ -21,7 +21,7 @@ public class DecalCollider : MonoBehaviour
         draggingManager = GameObject.FindAnyObjectByType<DraggingManager>();
         startingPosition = transform.position;
 
-        audioSource = GameObject.Find("ApplicazioneVernice").GetComponent<AudioSource>();
+        audioSource = GameObject.Find("ApplicazioneAdesivo").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

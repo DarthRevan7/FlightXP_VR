@@ -1373,6 +1373,74 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 1732395558498817250, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3710b4da2f4d94742b4ece398f08232e, type: 3}
+    - target: {fileID: 1986446213463991606, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986446213463991606, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986446213463991606, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.011764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547082844153062077, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628445680070943074, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628445680070943074, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628445680070943074, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.011764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000551432449282426, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee8e2852361c8ca48ad64f715e6898a3, type: 3}
+    - target: {fileID: 5115655772080726190, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115655772080726190, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115655772080726190, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.011764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976441333093773047, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -153
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056067266244017080, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056067266244017080, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056067266244017080, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.011764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095382806377122412, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3d3d24d6381010e4d8da373c9b9c5e51, type: 3}
     - target: {fileID: 7299122020879555416, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1417,14 +1485,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5180937209541457482}
-    - target: {fileID: 7391438977162804972, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartTransition
-      objectReference: {fileID: 0}
-    - target: {fileID: 7391438977162804972, guid: d21314cfd7611c140a6e6c23b26dd9a2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneTransitioner2, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

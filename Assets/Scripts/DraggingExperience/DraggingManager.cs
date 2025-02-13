@@ -23,7 +23,7 @@ public class DraggingManager : MonoBehaviour
     [SerializeField] private GameObject startFlight_UI;
     // [SerializeField] private GameObject colorManager;
     [SerializeField] private GameObject tutorialUI;
-    private FadeEffect fadeEffect;
+    private FadeEffect2 fadeEffect;
     private bool waitingFade = false;
 
     [SerializeField] private AudioSource audioSource;
@@ -62,7 +62,7 @@ public class DraggingManager : MonoBehaviour
         //DECOMMENTARE!!
         experienceFinished = ExperienceEnded();
 
-        fadeEffect = Camera.main.gameObject.GetComponent<FadeEffect>();
+        fadeEffect = Camera.main.gameObject.GetComponent<FadeEffect2>();
 
 
         //Modificare il nome del container delle mesh dell'aereo, nel caso in cui sia diverso

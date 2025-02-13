@@ -25,8 +25,19 @@ public class DragPoint : MonoBehaviour
     //Indice della UI card relativo alla parte di aereo a cui è attaccato questo script.
     [SerializeField] private int UICardIndex;
     [SerializeField] private StepManager stepManagerUI;
-    
+    [SerializeField] private AudioSource audioSource;
 
+
+    void Awake()
+    {
+        audioSource = GameObject.Find("OggettoPosizionatoBene").GetComponent<AudioSource>();
+    }
+
+    public void CoverPanelDeactivate()
+    {
+                    coverPanel.SetActive(false);
+
+    }
     private void OnCollisionEnter(Collision other) {
         //Ricavo le stringhe dei nomi dei gameobjects
         string otherName, thisName;
@@ -50,8 +61,10 @@ public class DragPoint : MonoBehaviour
             {
                 activeElement.SetActive(false);
                 UICards[UICardIndex].SetActive(true);
-                stepManagerUI.SetCurrentStepIndex(UICardIndex);
+                stepManagerUI.SetCurrentStepIndex(UICardIndex); 
             }
+
+            audioSource.Play();
 
 
         }

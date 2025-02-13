@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5404394231019202341}
   - component: {fileID: 1021051129992349039}
   - component: {fileID: 5288950427103655458}
+  - component: {fileID: 2283666147729635492}
   m_Layer: 0
   m_Name: secchio_rosso_metallico
   m_TagString: Untagged
@@ -33,8 +34,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.2724895, y: 0.00000071525574, z: -4.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,6 +131,8 @@ MonoBehaviour:
   particlePrefab: {fileID: 8221093879857435376, guid: a5e949588836be14eb12e06ea9c7eeb4, type: 3}
   splashColor: {r: 1, g: 0, b: 0, a: 1}
   timeToDestruction: 2
+  startingPosition: {x: 0, y: 0, z: 0}
+  audioSource: {fileID: 0}
 --- !u!54 &5404394231019202341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -293,3 +296,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPosition: {x: 0, y: 0, z: 0}
   boundsCollider: {fileID: 0}
+--- !u!114 &2283666147729635492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142753272108749282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8632312bdec03f849ae51566805d2fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabAudio: {fileID: 0}

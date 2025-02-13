@@ -12,6 +12,7 @@ public class SceneTransitioner2 : MonoBehaviour
 
     private bool transitioning = false;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,6 +40,8 @@ public class SceneTransitioner2 : MonoBehaviour
         fadeEffect.targetAlpha = 1.0f;
         fadeEffect.isFading = true;
     }
+
+    
 
     // private IEnumerator SceneTransitioning()
     // {

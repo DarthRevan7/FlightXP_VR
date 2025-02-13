@@ -11,7 +11,7 @@ public class DraggingManager : MonoBehaviour
     
     [SerializeField] private MeshRenderer[] materialParts;
     [SerializeField] private Material highlightMaterial;
-    [SerializeField] private bool experienceFinished = false;
+    [SerializeField] public bool experienceFinished = false;
     [SerializeField] private TMP_Text statoEsperienzaText, childCountText;
 
     [SerializeField] private GameObject aereoInPezzi, aereoInPezziPrefab;
@@ -21,10 +21,15 @@ public class DraggingManager : MonoBehaviour
 
 
     [SerializeField] private GameObject startFlight_UI;
-    [SerializeField] private GameObject colorManager;
+    // [SerializeField] private GameObject colorManager;
     [SerializeField] private GameObject tutorialUI;
     private FadeEffect fadeEffect;
     private bool waitingFade = false;
+
+    [SerializeField] private AudioSource audioSource;
+
+
+    [SerializeField] public bool terminateXP;
 
 
 
@@ -70,13 +75,26 @@ public class DraggingManager : MonoBehaviour
         //sistemare, in modo da fornire un feedback corretto riguardo alla fine dell'esperienza
         //di dragging.
         lastObjects = new GameObject[2];
+
+        audioSource = GameObject.Find("CompletamentoAereo").GetComponent<AudioSource>();    
     }
 
     // Update is called once per frame
     void Update()
     {
         //DECOMMENTARE!!!
-        experienceFinished = ExperienceEnded();
+        if(!experienceFinished && ExperienceEnded())
+        {
+            experienceFinished = true;
+            //audioSource.Play();
+            ColorManager.colorManager.experienceDone = true;
+        }
+
+        if(terminateXP)
+        {
+            TerminateXP();
+            terminateXP = false;
+        }
 
         //Text field di debug.
         //statoEsperienzaText.text = "Esperienza finita: " + experienceFinished.ToString();
@@ -91,6 +109,8 @@ public class DraggingManager : MonoBehaviour
         {
             tutorialUI.SetActive(true);
         }
+
+
         
 
     }
@@ -114,6 +134,7 @@ public class DraggingManager : MonoBehaviour
     //gameobject container.
     private bool ExperienceEnded()
     {
+        if(aereoInPezzi==null) return true;
         if(aereoInPezzi.transform.childCount == 2)
         {
             lastObjects[0] = aereoInPezzi.transform.GetChild(aereoInPezzi.transform.childCount -1).gameObject;
@@ -123,6 +144,18 @@ public class DraggingManager : MonoBehaviour
             return true;
         return false;
         
+    }
+
+    public void TerminateXP()
+    {
+        Debug.Log("term1");
+        if(aereoInPezzi != null)
+        {
+                    Debug.Log("term2");
+
+            SetPlaneMaterial(aereoInPezzi.transform.GetChild(0).GetComponent<MeshRenderer>().material);
+            Destroy(aereoInPezzi);
+        }
     }
 
     public bool GetExperienceFinished()
@@ -136,8 +169,10 @@ public class DraggingManager : MonoBehaviour
         {
             materialParts[i].material = material;
         }
-        colorManager.GetComponent<ColorManager>().planeMaterial = material;
+        ColorManager.colorManager.planeMaterial = material;
     }
+
+
 
     
 

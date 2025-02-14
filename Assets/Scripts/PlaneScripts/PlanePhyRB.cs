@@ -61,6 +61,9 @@ public class PlanePhyRB : MonoBehaviour
 
     public Vector3 vel;
     public Vector3 ang_vel;
+    public Vector3 pos;
+    public float current_throttle_value;
+    public Vector3 rot;
 
     void Start()
     {
@@ -206,6 +209,9 @@ public class PlanePhyRB : MonoBehaviour
 //#endif
         vel = rb.linearVelocity;
         ang_vel = rb.angularVelocity;
+        pos = rb.position;
+        current_throttle_value = throttle_control;
+        rot = rb.rotation.eulerAngles;
     }
 
     void applyControls(float throttle_input, float roll_input, float pitch_input, float yaw_input, float deltaT)

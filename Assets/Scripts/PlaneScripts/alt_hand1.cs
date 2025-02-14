@@ -17,11 +17,11 @@ public class alt_hand1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlanePhy2 planePhy2 = plane.GetComponent<PlanePhy2>();
+        PlanePhyRB planePhy2 = plane.GetComponent<PlanePhyRB>();
 
         Vector3 currentRotation = transform.localEulerAngles;
 
-        currentRotation.z = (planePhy2.getAltitude()/scale *2.0f*180.0f) -90.0f;
+        currentRotation.z = (planePhy2.pos.y/scale *2.0f*180.0f) -90.0f;
 
         //Debug.Log(planePhy2.getSpeed());
 

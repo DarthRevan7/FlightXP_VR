@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class elica_effect : MonoBehaviour
 {
+    public GameObject plane;
+
     [Range(0f, 200.0f)]
     public float propellerSpeed = 0.0f;
 
@@ -28,6 +30,9 @@ public class elica_effect : MonoBehaviour
 
     void Update()
     {
+        PlanePhyRB planePhyRB = plane.GetComponent<PlanePhyRB>();
+        propellerSpeed = planePhyRB.current_throttle_value*250.0f;
+
         elica_t = 1.0f - Mathf.SmoothStep(0.0f, 1.0f, (propellerSpeed - planes_cutoff_speed) / (mesh_cutoff_speed - planes_cutoff_speed));
         elica.transform.Rotate(Vector3.right * propellerSpeed * 360.0f / 60.0f * Time.deltaTime);
 

@@ -142,6 +142,12 @@ MonoBehaviour:
   yaw: {fileID: -5304421558017920340, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
   throttle: {fileID: 7103236484362725349, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
   autopilot: {fileID: 131111903711305745, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
+  propeller_max_thrust: 7000
+  propeller_thrust_position: {x: 0, y: 0.1, z: 3}
+  LiftCoefficient: 0.6
+  MaxElevatorAngle: 10
+  MaxFlapAngle: 15
+  MaxVerticalTailAngle: 10
 --- !u!1001 &4804030979038981495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,10 +164,18 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 1360008539510237266}
+    - target: {fileID: 6248215133913887933, guid: bd88d6cfa41f77f49b4eee7acfc6d0ed, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8735030354933932704, guid: bd88d6cfa41f77f49b4eee7acfc6d0ed, type: 3}
       propertyPath: plane
       value: 
       objectReference: {fileID: 1360008539510237266}
+    - target: {fileID: 8735030354933932704, guid: bd88d6cfa41f77f49b4eee7acfc6d0ed, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9198927532162236877, guid: bd88d6cfa41f77f49b4eee7acfc6d0ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -276,15 +290,31 @@ PrefabInstance:
       value: Aereo_rb
       objectReference: {fileID: 0}
     - target: {fileID: 5521233540065886277, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521233540065886277, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_ImplicitCom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521233540065886277, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5521233540065886277, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_ImplicitTensor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5774612085863016556, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6161851848917289740, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581210586394689223, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}

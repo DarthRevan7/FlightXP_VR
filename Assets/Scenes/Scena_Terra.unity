@@ -543,8 +543,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25954843, y: 1, z: 5.0273743}
-  m_Center: {x: -0.07520868, y: 0, z: -2.4658484}
+  m_Size: {x: 0.25954843, y: 1.8756918, z: 5.872936}
+  m_Center: {x: -0.07520861, y: 0.20481364, z: -2.139639}
 --- !u!1001 &136046479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1586,7 +1586,12 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1030973129, guid: abc00000000018174814267299663313, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1030973129, guid: abc00000000018174814267299663313, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1030973127, guid: abc00000000018174814267299663313, type: 3}
@@ -3074,8 +3079,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25954843, y: 1, z: 5.0425696}
-  m_Center: {x: -0.07520869, y: 0, z: -2.4734461}
+  m_Size: {x: 0.25954843, y: 2.297852, z: 5.706374}
+  m_Center: {x: -0.07520869, y: 0.64892566, z: -2.2560184}
 --- !u!1001 &1219110613
 PrefabInstance:
   m_ObjectHideFlags: 0

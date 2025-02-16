@@ -65,6 +65,12 @@ public class PlanePhyRB : MonoBehaviour
     public float current_throttle_value;
     public Vector3 rot;
 
+
+    public GameObject right_flap_mesh;
+    public GameObject left_flap_mesh;
+    public GameObject right_elevator_mesh;
+    public GameObject left_elevator_mesh;
+    public GameObject rudder_mesh;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -212,6 +218,19 @@ public class PlanePhyRB : MonoBehaviour
         pos = rb.position;
         current_throttle_value = throttle_control;
         rot = rb.rotation.eulerAngles;
+
+        animateMovingParts();
+    }
+
+    void animateMovingParts()
+    {
+        right_flap_mesh.transform.localEulerAngles = new Vector3(0f, -roll_control * MaxFlapAngle, 0f);
+        left_flap_mesh.transform.localEulerAngles = new Vector3(0f, roll_control * MaxFlapAngle, 0f);
+
+        left_elevator_mesh.transform.localEulerAngles = new Vector3(0f, -pitch_control * MaxElevatorAngle, 0f);
+        right_elevator_mesh.transform.localEulerAngles = new Vector3(0f, -pitch_control * MaxElevatorAngle, 0f);
+
+        rudder_mesh.transform.localEulerAngles = new Vector3(0f, 0f, -yaw_control * MaxVerticalTailAngle);
     }
 
     void applyControls(float throttle_input, float roll_input, float pitch_input, float yaw_input, float deltaT)

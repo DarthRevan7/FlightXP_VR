@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &186539116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 293007155331273482, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+  m_PrefabInstance: {fileID: 1024302801923303484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &663041258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6040857197583803544, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
@@ -127,6 +132,26 @@ GameObject:
 --- !u!20 &663041260 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2604353015616997820, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+  m_PrefabInstance: {fileID: 1024302801923303484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &805776989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3217238394117638185, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+  m_PrefabInstance: {fileID: 1024302801923303484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1224992301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7130582232772921162, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+  m_PrefabInstance: {fileID: 1024302801923303484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1478412312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5184793855952744659, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+  m_PrefabInstance: {fileID: 1024302801923303484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1680177696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6016214897777724703, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
   m_PrefabInstance: {fileID: 1024302801923303484}
   m_PrefabAsset: {fileID: 0}
 --- !u!20 &2128505706 stripped
@@ -256,6 +281,26 @@ PrefabInstance:
       propertyPath: other
       value: 
       objectReference: {fileID: 663041258}
+    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: rudder_mesh
+      value: 
+      objectReference: {fileID: 805776989}
+    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: left_flap_mesh
+      value: 
+      objectReference: {fileID: 1224992301}
+    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: right_flap_mesh
+      value: 
+      objectReference: {fileID: 1478412312}
+    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: left_elevator_mesh
+      value: 
+      objectReference: {fileID: 186539116}
+    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: right_elevator_mesh
+      value: 
+      objectReference: {fileID: 1680177696}
     - target: {fileID: 2866278171825478929, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: 'm_Cameras.Array.data[0]'
       value: 

@@ -221,8 +221,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25954843, y: 1, z: 5.0501585}
-  m_Center: {x: -0.07520868, y: 0, z: -2.4772406}
+  m_Size: {x: 0.25954843, y: 1.2827153, z: 5.7573757}
+  m_Center: {x: -0.07520861, y: -0.14135721, z: -2.123632}
 --- !u!1 &18945442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,7 +2437,8 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1030973129, guid: abc00000000018174814267299663313, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1030973127, guid: abc00000000018174814267299663313, type: 3}
@@ -4780,8 +4781,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25954843, y: 1, z: 5.0751195}
-  m_Center: {x: -0.07520869, y: 0, z: -2.489721}
+  m_Size: {x: 0.25954843, y: 1.2897136, z: 5.9331574}
+  m_Center: {x: -0.07520869, y: -0.0677083, z: -2.269849}
 --- !u!1001 &1928583175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5381,8 +5382,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.31249988, y: 1.5826772, z: 4.170865}
-  m_Center: {x: 0.0037949004, y: -0.29133788, z: -2.206056}
+  m_Size: {x: 1.0114394, y: 2.1318707, z: 5.807395}
+  m_Center: {x: 0.35326478, y: -0.01674107, z: -2.2273192}
 --- !u!4 &2055500264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1030973143, guid: abc00000000000241362475822470300, type: 3}

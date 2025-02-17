@@ -85,6 +85,10 @@ public class PlanePhyRB : MonoBehaviour
         initializePlane();
     }
 
+    void Awake()
+    {
+        // Time.timeScale=0.001f;
+    }
     void initializePlane()
     {
         /*DRAG ELEMENTS*/

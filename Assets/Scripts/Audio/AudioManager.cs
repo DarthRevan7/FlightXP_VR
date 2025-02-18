@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class AudioManager : MonoBehaviour
 {
     public GameObject plane;
-    private PlanePhy2 fisicaAereo;
+    private PlanePhyRB fisicaAereo;
     
     public AudioSource autopilotOn;
     public AudioSource autopilotOff;
@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         //AutopilotChanged.AddListener(CheckAutopilotStatus());
-        fisicaAereo = plane.GetComponent<PlanePhy2>();
+        fisicaAereo = plane.GetComponent<PlanePhyRB>();
         throttle.loop = true;
         throttle.Play();
         terrainCollisionDetector = plane.GetComponent<TerrainCollisionDetector>();
@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        throttle.volume = fisicaAereo.getThrottle()/4.0f+0.25f;
+        throttle.volume = fisicaAereo.throttle_control/4.0f+0.25f;
 
         if(terrainCollisionDetector.danger && !danger.isPlaying)
         {

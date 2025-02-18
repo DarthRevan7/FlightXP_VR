@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ColorManager : MonoBehaviour
 {
+    //Istanza del Singleton
     public static ColorManager colorManager;
     //Deve essere settato all'inizio col Materiale dell'aereo nella scena.
     public Material planeMaterial;
     public bool experienceDone = false;
 
     public Material decalMaterial;
-    public GameObject decalProjectors;
+    // public GameObject decalProjectors;
+
+    public GameObject aereoGraphics;
+    public Transform fullModel;
+    
 
     void Awake()
     {
@@ -39,16 +44,15 @@ public class ColorManager : MonoBehaviour
         GameObject aereo = GameObject.Find("aereo");
         GameObject fusoliera = GameObject.Find("fusoliera");
 
-        //Recupera riferimento
-        decalProjectors = GameObject.Find("Adesivi");
-        
-
-        if(aereo != null && fusoliera != null && scene.name.Equals("Scena_Volo"))
+        aereoGraphics = GameObject.Find("AereoGraphics");
+        if(aereoGraphics != null)
         {
-            aereo.GetComponent<MeshRenderer>().material = planeMaterial;
-            fusoliera.GetComponent<MeshRenderer>().material = planeMaterial;
-
-            
+            fullModel = aereoGraphics.transform.Find("FullModel");
+            fullModel.GetComponent<MeshRenderer>().materials[0] = planeMaterial;
+            for(int i = 0; i < fullModel.childCount; i++)
+            {
+                fullModel.GetChild(i).GetComponent<MeshRenderer>().materials[0] = planeMaterial;
+            }
         }
 
         ChangeDecalMaterial(decalMaterial);
@@ -62,18 +66,16 @@ public class ColorManager : MonoBehaviour
 
         if(decalMaterial != null)
         {
-            if(SceneManager.GetActiveScene().name.Equals("Scena_Volo"))
+            if(aereoGraphics != null)
             {
-                GameObject aereo = GameObject.Find("aereo");
-
-                if(aereo != null)
+                fullModel = aereoGraphics.transform.Find("FullModel");
+                fullModel.GetComponent<MeshRenderer>().materials[1] = decalMaterial;
+                for(int i = 0; i < fullModel.childCount; i++)
                 {
-                    Material []materials = aereo.GetComponent<MeshRenderer>().materials;
-                    materials[1] = decalMaterial;
-                    aereo.GetComponent<MeshRenderer>().materials = materials;
+                    fullModel.GetChild(i).GetComponent<MeshRenderer>().materials[1] = decalMaterial;
                 }
             }
-            else if(SceneManager.GetActiveScene().name.Equals("Scena_Terra"))
+            if(SceneManager.GetActiveScene().name.Equals("Scena_Terra"))
             {
                 GameObject aereoNoPhysics = GameObject.Find("Aereo_NoPhysics");
 

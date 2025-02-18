@@ -22,8 +22,8 @@ public class PlanePhyRB : MonoBehaviour
 
     public float timeDilation = 1.0f;
 
-    [SerializeField]
-    private InputActionReference roll, pitch, yaw, throttle, autopilot;
+    // [SerializeField]
+    // private InputActionReference roll, pitch, yaw, throttle, autopilot;
 
     //private List<LiftSurface> aerodinamic_surfaces;
     LiftSurface right_wing = new LiftSurface();
@@ -38,7 +38,6 @@ public class PlanePhyRB : MonoBehaviour
     private List<Surface> drag_elements = new List<Surface>();
 
     public float propeller_max_thrust = 7000.0f;
-    public float throttle_dead_zone = 0.1f;
     public Vector3 propeller_thrust_position = new Vector3(0.0f, 0.10f, 3.0f);
 
     public float LiftCoefficient = 0.6f; // air density * 1/2
@@ -53,8 +52,8 @@ public class PlanePhyRB : MonoBehaviour
     public float YawControlSpeed = 2.0f;
     public float ThrottleControlSpeed = 0.5f;
 
-    float throttle_control = 1.0f;
-    float pitch_control = 0.0f;
+    public float throttle_control = 1.0f;
+    public float pitch_control = 0.0f;
     float roll_control = 0.0f;
     float yaw_control = 0.0f;
 
@@ -172,27 +171,6 @@ public class PlanePhyRB : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float roll_in = roll.action.ReadValue<float>();
-        float pitch_in = pitch.action.ReadValue<float>();
-        float yaw_in = yaw.action.ReadValue<float>();
-        float throttle_in = throttle_control;
-
-        if (Mathf.Abs(throttle.action.ReadValue<float>()) > throttle_dead_zone)
-        {
-            throttle_in = throttle.action.ReadValue<float>();
-            if (throttle_in > 0.0f) throttle_in = 1.0f;
-            else throttle_in = 0.0f;
-        }
-
-        if(autopilot.action.IsPressed())
-        {
-#if UNITY_EDITOR
-            EditorApplication.isPaused = true;
-#endif
-        }
-
-        applyControls(throttle_in, roll_in, pitch_in, yaw_in, Time.fixedDeltaTime);
-
         foreach(Surface drag_element in drag_elements)
         {
             applyDrag(drag_element);
@@ -222,6 +200,9 @@ public class PlanePhyRB : MonoBehaviour
         pos = rb.position;
         current_throttle_value = throttle_control;
         rot = rb.rotation.eulerAngles;
+        if(rot.x >180f) rot.x-=360f;
+        if(rot.y >180f) rot.y-=360f;
+        if(rot.z >180f) rot.z-=360f;
 
         animateMovingParts();
     }
@@ -237,7 +218,7 @@ public class PlanePhyRB : MonoBehaviour
         rudder_mesh.transform.localEulerAngles = new Vector3(0f, 0f, -yaw_control * MaxVerticalTailAngle);
     }
 
-    void applyControls(float throttle_input, float roll_input, float pitch_input, float yaw_input, float deltaT)
+    public void applyControls(float throttle_input, float roll_input, float pitch_input, float yaw_input, float deltaT)
     {
         if (pitch_input > 1) pitch_input = 1;
         else if(pitch_input < -1) pitch_input = -1;

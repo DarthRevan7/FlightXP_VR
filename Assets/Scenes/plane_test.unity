@@ -171,58 +171,6 @@ Transform:
   - {fileID: 1782877288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &225616186 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4292987649662031180, guid: c500194b08389754ca775e1283db37f1, type: 3}
-  m_PrefabInstance: {fileID: 1467680267}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &225616187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225616186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08470e2a2343b14e90107557e5208ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visible: 1
-  renderers:
-  - {fileID: 747468950}
-  style:
-    texture: {fileID: 2800000, guid: fab146ee8a060bf4e98ca939a793427c, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    width: 32
-    height: 32
-  showArrow: 1
-  arrowStyle:
-    texture: {fileID: 2800000, guid: b14d512c127ad2545b2ce2126a7690c6, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    margin: 0
-    width: 16
-    height: 16
---- !u!114 &225616188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225616186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c660d981a1dbd44eaa0fdbbbd053c0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visible: 1
-  renderers:
-  - {fileID: 747468950}
-  style:
-    texture: {fileID: 2800000, guid: fab146ee8a060bf4e98ca939a793427c, type: 3}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    width: 32
-    height: 32
 --- !u!1 &551274223
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &551274224
 Camera:
   m_ObjectHideFlags: 0
@@ -800,13 +748,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4292987649662031180, guid: c500194b08389754ca775e1283db37f1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 225616188}
-    - targetCorrespondingSourceObject: {fileID: 4292987649662031180, guid: c500194b08389754ca775e1283db37f1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 225616187}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c500194b08389754ca775e1283db37f1, type: 3}
 --- !u!1 &1782877284
 GameObject:
@@ -1342,6 +1284,10 @@ MonoBehaviour:
   brake: {fileID: 0}
   throttle_dead_zone: 0.1
   autopilotEngaged: 0
+  tutorialActive: 0
+  tutorialAllowRoll: 0
+  tutorialAllowPitch: 0
+  tutorialAllowThrottle: 0
   autopilot_delay: 1
   trim: -0.25
   target_roll: 0

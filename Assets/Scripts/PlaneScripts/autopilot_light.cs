@@ -19,9 +19,9 @@ public class AutopilotLight : MonoBehaviour
 
     void Update()
     {
-        PlanePhy2 planePhy2 = plane.GetComponent<PlanePhy2>();
+        InputLimiter input_limiter = plane.GetComponent<InputLimiter>();
         float intensity = 0;
-        if (planePhy2.autopilotEngaged)
+        if (input_limiter.autopilotEngaged)
         {
             intensity = 1.0f;
         }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d2f01c2616edf04da5fb8477a5e9bf1, type: 3}
-  m_Name: zrro
+  m_Name: 4 - Throttle
   m_EditorClassIdentifier: 
-  track: {fileID: 0}
-  step: 0
+  audioClip: {fileID: 8300000, guid: a2a6b07f316372344b4f2a46603338ad, type: 3}
+  step: 4

@@ -14,6 +14,12 @@ public class InputLimiter : MonoBehaviour
     PlanePhyRB planePhy;
 
     public bool autopilotEngaged = true;
+
+    public bool tutorialActive = false;
+    public bool tutorialAllowRoll = false;
+    public bool tutorialAllowPitch = false;
+    public bool tutorialAllowThrottle = false;
+
     public float autopilot_delay = 1.0f;
     private float last_autopilot_change_time;
 
@@ -54,7 +60,7 @@ public class InputLimiter : MonoBehaviour
             ToggleAutopilot();
         }
 
-        if(autopilotEngaged)
+        if(autopilotEngaged||tutorialActive)
         {
 
             //float target_vspeed = 0;
@@ -80,8 +86,30 @@ public class InputLimiter : MonoBehaviour
             // pitch_in += (pitch_acc + planePhy.ang_vel.x + (-planePhy.rot.x*Mathf.Deg2Rad - 0.1f))*Time.fixedDeltaTime;
             pitch_in  = planePhy.rot.x*Mathf.Deg2Rad - trim;
 
-            Debug.Log($"pitch_acc: {pitch_acc},  planePhy.ang_vel.x: {planePhy.ang_vel.x}, planePhy.rot.x {planePhy.rot.x*Mathf.Deg2Rad}, pitch_in: {pitch_in}");
+            // Debug.Log($"pitch_acc: {pitch_acc},  planePhy.ang_vel.x: {planePhy.ang_vel.x}, planePhy.rot.x {planePhy.rot.x*Mathf.Deg2Rad}, pitch_in: {pitch_in}");
         }
+
+        if(tutorialActive)
+        {
+            if(tutorialAllowPitch) pitch_in = pitch.action.ReadValue<float>();
+
+            if(tutorialAllowRoll) roll.action.ReadValue<float>();
+
+            if(tutorialAllowThrottle)
+            {
+                throttle_in = planePhy.throttle_control;
+
+                if (Mathf.Abs(throttle.action.ReadValue<float>()) > throttle_dead_zone)
+                {
+                    throttle_in = throttle.action.ReadValue<float>();
+                    if (throttle_in > 0.0f) throttle_in = 1.0f;
+                    else throttle_in = 0.0f;
+                }
+            }
+        }
+
+
+
         last_vel = planePhy.vel;
         last_ang_vel = planePhy.ang_vel;
         planePhy.applyControls(throttle_in, roll_in, pitch_in, yaw_in, Time.fixedDeltaTime);

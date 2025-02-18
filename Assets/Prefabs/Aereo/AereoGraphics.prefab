@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27feb5fa315b51c45b45cc62085d5e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera_input: {fileID: -8967400262048014999, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
-  vr: 1
+  camera_input: {fileID: -6598072970733331125, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
+  vr: 0
   sensitivity: 0.1
 --- !u!114 &2085878052175611280
 MonoBehaviour:
@@ -27658,7 +27658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7327102537838591636
 Transform:
   m_ObjectHideFlags: 0
@@ -38799,7 +38799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8742516000654494993
 Transform:
   m_ObjectHideFlags: 0

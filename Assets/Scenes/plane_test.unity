@@ -911,38 +911,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 512300833783242239, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1418543324948264824, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 1861191646328329166, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: other
       value: 
       objectReference: {fileID: 6765077776795651236}
-    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: yaw
-      value: 
-      objectReference: {fileID: -5289548289861798516, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
-    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: roll
-      value: 
-      objectReference: {fileID: 8221918154107016454, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
-    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: pitch
-      value: 
-      objectReference: {fileID: 587947352263130072, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
-    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: throttle
-      value: 
-      objectReference: {fileID: 9128271210790255251, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
-    - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: autopilot
-      value: 
-      objectReference: {fileID: -3062701165317179265, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 2372590753426158538, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: rudder_mesh
       value: 
@@ -964,10 +936,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6722447539974907171}
     - target: {fileID: 2866278171825478929, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Cameras.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2866278171825478929, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: 'm_Cameras.Array.data[0]'
       value: 
       objectReference: {fileID: 3031917316368687488}
@@ -975,18 +943,6 @@ PrefabInstance:
       propertyPath: 'm_Cameras.Array.data[1]'
       value: 
       objectReference: {fileID: 551274224}
-    - target: {fileID: 2866278171825478929, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: 'm_Cameras.Array.data[2]'
-      value: 
-      objectReference: {fileID: 551274224}
-    - target: {fileID: 3409489177235283825, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3553703030627063361, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4093791475071413255, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11236
@@ -1027,49 +983,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4629753954930900088, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 5100718135582818404, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_Name
       value: Aereo_rb
       objectReference: {fileID: 0}
-    - target: {fileID: 6161851848917289740, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6161851848917289740, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: checkLayers.m_Bits
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548392801829883303, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769607210887964600, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
-    - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: plane_input
-      objectReference: {fileID: 0}
-    - target: {fileID: 8957436712860362934, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5100718135582818404, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8493216617195760056}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
 --- !u!1 &2491300653695115285 stripped
 GameObject:
@@ -1101,14 +1022,6 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 847945794375648724}
-    - target: {fileID: 2968761489779224756, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
-      propertyPath: vr
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2968761489779224756, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
-      propertyPath: camera_input
-      value: 
-      objectReference: {fileID: -6598072970733331125, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
     - target: {fileID: 3863013400737974727, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: plane
       value: 
@@ -1121,10 +1034,6 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 847945794375648724}
-    - target: {fileID: 5434395195556715556, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5901555532861558793, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: plane
       value: 
@@ -1189,10 +1098,6 @@ PrefabInstance:
       propertyPath: ship
       value: 
       objectReference: {fileID: 8493216617195760055}
-    - target: {fileID: 8630613432983725598, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8647497882946639739, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: plane
       value: 
@@ -1304,34 +1209,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4093791475071413255, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
   m_PrefabInstance: {fileID: 2423703519471053249}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8493216617195760056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847945794375648724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518db6ab01a3f88458d44685ef4f228f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roll: {fileID: 3675231955475858612, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
-  pitch: {fileID: 1945596340158229729, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
-  yaw: {fileID: -5304421558017920340, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
-  throttle: {fileID: 7103236484362725349, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
-  autopilot: {fileID: 131111903711305745, guid: 254496aa225cd764fb1fbbebe044d558, type: 3}
-  brake: {fileID: 0}
-  throttle_dead_zone: 0.1
-  autopilotEngaged: 0
-  tutorialActive: 0
-  tutorialAllowRoll: 0
-  tutorialAllowPitch: 0
-  tutorialAllowThrottle: 0
-  autopilot_delay: 1
-  trim: -0.25
-  target_roll: 0
-  target_speed: 70
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

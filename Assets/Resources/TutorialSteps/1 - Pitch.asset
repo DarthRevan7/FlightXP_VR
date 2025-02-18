@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: 1 - Pitch
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 72299ab2c28aaeb408a643b2535e481c, type: 3}
+  tutorialSprite: {fileID: 21300000, guid: b60be7c5ef8952c4fa14eb73f09d8aba, type: 3}
   step: 1

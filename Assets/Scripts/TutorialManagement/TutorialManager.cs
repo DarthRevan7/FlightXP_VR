@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class TutorialManager : MonoBehaviour
 
     //Da rimuovere dopo aver implementato le condizioni necessarie
     public bool conditionToImplement = true;
+    //Canvas x immagini del tutorial
+    public Image tutorialImage;
 
     
 
@@ -52,6 +55,10 @@ public class TutorialManager : MonoBehaviour
         audioSource.PlayDelayed(delayTime);
 
         inputLimiter.tutorialActive = true;
+
+        tutorialImage = GameObject.Find("TutorialImage").GetComponent<Image>();
+
+        SetTutorialImage();
         //Assicurarsi che la traccia non parta in Awake.
         // audioSource.playOnAwake = false;
 
@@ -163,6 +170,7 @@ public class TutorialManager : MonoBehaviour
                 currentStep++;
                 audioSource.clip = tutorialSteps[currentStep].audioClip;
                 audioSource.PlayDelayed(delayTime);
+                SetTutorialImage();
 
                 //Resetta le congratulazioni
                 congratsIndex = -1;
@@ -192,6 +200,13 @@ public class TutorialManager : MonoBehaviour
         {
             verifiedStep = inputAction.action.IsPressed();
         }
+    }
+
+    //Setta l'immagine del tutorial in base allo step corrente.
+    public void SetTutorialImage()
+    {
+        //Nel caso non funzionasse, prova ad inserire una sprite placeholder
+        tutorialImage.sprite = tutorialSteps[currentStep].tutorialSprite;
     }
     
 }

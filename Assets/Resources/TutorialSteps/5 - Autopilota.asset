@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: 5 - Autopilota
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 09ff4740ae23d8e409c34266db388c03, type: 3}
+  tutorialSprite: {fileID: 21300000, guid: 8a92f3c41b9128f459fa49c076fa4e02, type: 3}
   step: 5

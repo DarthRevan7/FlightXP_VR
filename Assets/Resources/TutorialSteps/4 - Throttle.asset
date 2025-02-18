@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: 4 - Throttle
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: a2a6b07f316372344b4f2a46603338ad, type: 3}
+  tutorialSprite: {fileID: 21300000, guid: 12cc8c16702d0d44ea12afda36d616bb, type: 3}
   step: 4

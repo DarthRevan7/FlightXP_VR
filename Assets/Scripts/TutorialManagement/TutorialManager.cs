@@ -12,7 +12,7 @@ public class TutorialManager : MonoBehaviour
     public int currentStep = 0;
     public AudioSource audioSource;
 
-
+    public InputLimiter inputLimiter;
 
     //Sistema di input
     public InputActionReference roll, pitch, yaw, throttle, repeatStep, autopilot;
@@ -50,6 +50,8 @@ public class TutorialManager : MonoBehaviour
         currentStep = 0;
         audioSource.clip = tutorialSteps[currentStep].audioClip;
         audioSource.PlayDelayed(delayTime);
+
+        inputLimiter.tutorialActive = true;
         //Assicurarsi che la traccia non parta in Awake.
         // audioSource.playOnAwake = false;
 
@@ -69,7 +71,7 @@ public class TutorialManager : MonoBehaviour
         {
             NextStep();
         }
-
+        if(audioSource.isPlaying) return;
         //Premi pulsante x ripetere il tutorial
         if(currentStep == 0)
         {
@@ -78,26 +80,33 @@ public class TutorialManager : MonoBehaviour
         //Pitch (su e giù)
         if(currentStep == 1)
         {
+            inputLimiter.tutorialAllowPitch = true;
             VerificaStepRotazione(pitch, rotationThreshold);
         }
         //Roll (Rotazione dx o sx)
         if(currentStep == 2)
         {
+            inputLimiter.tutorialAllowRoll = true;
             VerificaStepRotazione(roll, rotationThreshold);
         }
         // Yaw (Rotazione rispetto all'alto dx sx)
         if(currentStep == 3)
         {
+            inputLimiter.tutorialAllowYaw = true;
             VerificaStepRotazione(yaw,rotationThreshold);
         }
         //Potenza del motore
         if(currentStep == 4)
         {
+            inputLimiter.tutorialAllowThrottle = true;
             VerificaStepRotazione(throttle,rotationThreshold);
         }
         //Autopilota
         if(currentStep == 5)
         {
+            inputLimiter.autopilotEngaged = false;
+            inputLimiter.tutorialActive = false;
+            inputLimiter.tutorialAllowAutopilot = true;
             VerificaStepPressione(autopilot);
         }
     }
@@ -110,12 +119,24 @@ public class TutorialManager : MonoBehaviour
         //Non devo aver finito il tutorial, perché altrimenti mi ripete l'ultima congratulazione.
         if(!audioSource.isPlaying && repeatStep.action.IsPressed() && currentStep!=0 && currentStep < tutorialSteps.Length)
         {
+            inputLimiter.tutorialAllowAutopilot = false;
+            inputLimiter.tutorialAllowPitch = false;
+            inputLimiter.tutorialAllowRoll = false;
+            inputLimiter.tutorialAllowThrottle = false;
+            inputLimiter.tutorialAllowYaw = false;
+            inputLimiter.tutorialActive = true;
             audioSource.Play();
         }
     }
 
     public void NextStep()
     {
+        inputLimiter.tutorialAllowAutopilot = false;
+        inputLimiter.tutorialAllowPitch = false;
+        inputLimiter.tutorialAllowRoll = false;
+        inputLimiter.tutorialAllowThrottle = false;
+        inputLimiter.tutorialAllowYaw = false;
+        inputLimiter.tutorialActive = true;
         //Va avanti nel tutorial
         //Se l'audio source non sta venendo riprodotta
         //Se ci sono altri step rimasti
@@ -126,7 +147,7 @@ public class TutorialManager : MonoBehaviour
             //Non devo congratularmi alla fine del tutorial!
             if(congratsIndex == -1 && currentStep < tutorialSteps.Length-1 && currentStep < tutorialSteps.Length -2)
             {
-                congratsIndex = Random.Range(0,4);
+                congratsIndex = Random.Range(0,3);
                 audioSource.clip = congratulazioni[congratsIndex].audioClip;
                 audioSource.Play();
             }

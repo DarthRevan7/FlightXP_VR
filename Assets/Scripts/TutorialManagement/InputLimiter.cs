@@ -19,6 +19,9 @@ public class InputLimiter : MonoBehaviour
     public bool tutorialAllowRoll = false;
     public bool tutorialAllowPitch = false;
     public bool tutorialAllowThrottle = false;
+    public bool tutorialAllowAutopilot = false;
+
+    public bool tutorialAllowYaw = false;
 
     public float autopilot_delay = 1.0f;
     private float last_autopilot_change_time;
@@ -55,7 +58,7 @@ public class InputLimiter : MonoBehaviour
             else throttle_in = 0.0f;
         }
 
-        if(autopilot.action.IsPressed())
+        if(autopilot.action.IsPressed() && (!tutorialActive || tutorialAllowAutopilot))
         {
             ToggleAutopilot();
         }
@@ -93,7 +96,7 @@ public class InputLimiter : MonoBehaviour
         {
             if(tutorialAllowPitch) pitch_in = pitch.action.ReadValue<float>();
 
-            if(tutorialAllowRoll) roll.action.ReadValue<float>();
+            if(tutorialAllowRoll) roll_in = roll.action.ReadValue<float>();
 
             if(tutorialAllowThrottle)
             {
@@ -106,6 +109,8 @@ public class InputLimiter : MonoBehaviour
                     else throttle_in = 0.0f;
                 }
             }
+
+            if(tutorialAllowYaw) yaw_in = yaw.action.ReadValue<float>();
         }
 
 

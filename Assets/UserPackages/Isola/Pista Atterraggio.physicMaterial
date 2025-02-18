@@ -9,7 +9,7 @@ PhysicsMaterial:
   m_Name: Pista Atterraggio
   serializedVersion: 2
   m_DynamicFriction: 0.75
-  m_StaticFriction: 0.6
+  m_StaticFriction: 0.75
   m_Bounciness: 0
   m_FrictionCombine: 0
   m_BounceCombine: 0

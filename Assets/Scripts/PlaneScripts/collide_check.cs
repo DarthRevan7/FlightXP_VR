@@ -15,6 +15,16 @@ public class TerrainCollisionDetector : MonoBehaviour
 
     public LayerMask checkLayers;
 
+    public float collisionTreshold = 10000.0f;
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.impulse.magnitude > collisionTreshold)
+        {
+            Debug.Log($"Collided with: {collision.gameObject.name}, with impulse: {collision.impulse}");
+        }
+    }
+
     void Update()
     {
         danger = Physics.CheckSphere(plane.GetComponent<PlanePhyRB>().pos, dangerDistance, checkLayers)

@@ -1039,7 +1039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4093791475071413255, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1260.65
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 4093791475071413255, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1343,6 +1343,9 @@ MonoBehaviour:
   throttle_dead_zone: 0.1
   autopilotEngaged: 0
   autopilot_delay: 1
+  trim: -0.25
+  target_roll: 0
+  target_speed: 70
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

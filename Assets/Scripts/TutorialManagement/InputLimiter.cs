@@ -17,11 +17,21 @@ public class InputLimiter : MonoBehaviour
     public float autopilot_delay = 1.0f;
     private float last_autopilot_change_time;
 
+    private Vector3 last_vel;
+    private Vector3 last_ang_vel;
+
+    public float trim = -0.1f;
+    
+    public float target_roll = 0;
+    public float target_speed = 70;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         audioManager = GameObject.FindAnyObjectByType<AudioManager>();
         planePhy = GetComponent<PlanePhyRB>();
+        last_vel = planePhy.gameObject.GetComponent<Rigidbody>().linearVelocity;
+        last_ang_vel = planePhy.gameObject.GetComponent<Rigidbody>().angularVelocity;
     }
 
     // Update is called once per frame
@@ -46,18 +56,15 @@ public class InputLimiter : MonoBehaviour
 
         if(autopilotEngaged)
         {
-            float target_roll = 0;
-
-            float target_speed = 50;
 
             //float target_vspeed = 0;
-            float target_alt = 500;
+            // float target_alt = 500;
 
             roll_in = /*planePhy.ang_vel.z*/ + (planePhy.rot.z*Mathf.Deg2Rad - target_roll);
 
-            // throttle_in = planePhy.throttle_control;
+            throttle_in = planePhy.throttle_control;
 
-            // throttle_in += 0.001f * (target_speed - planePhy.vel.magnitude);
+            throttle_in += 0.001f * (target_speed - planePhy.vel.magnitude);
 
             //pitch_in = -(target_vspeed - getVerticalSpeed()) - model.AngularVelocity.y;
 
@@ -68,11 +75,15 @@ public class InputLimiter : MonoBehaviour
             // pitch_in += -model.AngularAcceleration.y - model.AngularVelocity.y - (model.RPY.y - 0.1f);
 
             //Debug.Log($"Speed: {getSpeed()}");
-
+            float pitch_acc = (last_ang_vel.x - planePhy.ang_vel.x)/Time.fixedDeltaTime;
             pitch_in = planePhy.pitch_control;
-            pitch_in += (planePhy.ang_vel.x + (planePhy.rot.x*Mathf.Deg2Rad - 0.1f));
-        }
+            // pitch_in += (pitch_acc + planePhy.ang_vel.x + (-planePhy.rot.x*Mathf.Deg2Rad - 0.1f))*Time.fixedDeltaTime;
+            pitch_in  = planePhy.rot.x*Mathf.Deg2Rad - trim;
 
+            Debug.Log($"pitch_acc: {pitch_acc},  planePhy.ang_vel.x: {planePhy.ang_vel.x}, planePhy.rot.x {planePhy.rot.x*Mathf.Deg2Rad}, pitch_in: {pitch_in}");
+        }
+        last_vel = planePhy.vel;
+        last_ang_vel = planePhy.ang_vel;
         planePhy.applyControls(throttle_in, roll_in, pitch_in, yaw_in, Time.fixedDeltaTime);
     }
 

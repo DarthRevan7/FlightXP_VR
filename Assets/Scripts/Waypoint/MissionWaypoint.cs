@@ -64,12 +64,12 @@ public class MissionWaypoint : MonoBehaviour
             if(Vector3.Cross(plane.transform.forward, direzioneTarget).y > 0)
             {
                 newRotation = Quaternion.Euler(0,angoloLimitato,0);
-                Debug.Log(message: angoloLimitato.ToString());
+                // Debug.Log(message: angoloLimitato.ToString());
             }
             else
             {
                 newRotation = Quaternion.Euler(0,-angoloLimitato,0);
-                Debug.Log(message: (-angoloLimitato).ToString());
+                // Debug.Log(message: (-angoloLimitato).ToString());
             }
 
             

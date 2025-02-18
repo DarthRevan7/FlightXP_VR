@@ -911,6 +911,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 512300833783242239, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418543324948264824, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1861191646328329166, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: other
       value: 
@@ -975,6 +983,10 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 3553703030627063361, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4093791475071413255, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11236
@@ -1015,9 +1027,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4629753954930900088, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5100718135582818404, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_Name
       value: Aereo_rb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161851848917289740, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161851848917289740, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: checkLayers.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548392801829883303, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769607210887964600, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_Actions
@@ -1026,6 +1058,10 @@ PrefabInstance:
     - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_DefaultActionMap
       value: plane_input
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957436712860362934, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1085,6 +1121,10 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 847945794375648724}
+    - target: {fileID: 5434395195556715556, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5901555532861558793, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: plane
       value: 

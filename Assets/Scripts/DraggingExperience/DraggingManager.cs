@@ -33,21 +33,15 @@ public class DraggingManager : MonoBehaviour
 
 
 
-    /*
-    
-    Potrei fare in modo che quando riparte l'esperienza, il parent dell'aereo viene re-istanziato 
-    tramite Destroy e poi un successivo Instance.
-    Oltre a questo devo rimettere a posto il reference dell'oggetto re-istanziato.
-    Ovviamente devo creare un pulsante x far ripartire l'esperienza.
 
-    Ricapitolando:
-    1. I pezzi appariranno e cadranno in una cesta
-    2. Il giocatore compone l'aereo
-    3. L'esperienza termina
-    4. Il giocatore preme sul pulsante per ricominciare l'esperienza
+    //Audio source spiegazione delle parti dell'aereo
+    public AudioSource audioSpiegazione;
+    //Serve per capire quali audio sono già riprodotti
+    public int[] audioSpiegati;
+    //Contiene gli scriptable object con gli audio dentro ed un numero che indica la uicard
+    public ExplanationAudio[] explanationAudio;
+
     
-    
-    */
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -59,7 +53,7 @@ public class DraggingManager : MonoBehaviour
         highlightMaterial = materialParts[0].material;
 
 
-        //DECOMMENTARE!!
+        
         experienceFinished = ExperienceEnded();
 
         fadeEffect = Camera.main.gameObject.GetComponent<FadeEffect2>();
@@ -76,7 +70,19 @@ public class DraggingManager : MonoBehaviour
         //di dragging.
         lastObjects = new GameObject[2];
 
-        audioSource = GameObject.Find("CompletamentoAereo").GetComponent<AudioSource>();    
+        audioSource = GameObject.Find("CompletamentoAereo").GetComponent<AudioSource>();   
+
+        //Ricava le audioSources sistemate negli scriptableobjects
+        explanationAudio = Resources.LoadAll<ExplanationAudio>("Audio_Spiegazione");
+        //Ricava l'audio source x la spiegazione
+        audioSpiegazione = GetComponent<AudioSource>();
+        //Istanzia gli interi per il check della riproduzione
+        audioSpiegati = new int[explanationAudio.Length];
+        for(int i = 0; i < audioSpiegati.Length; i++)
+        {
+            audioSpiegati[i] = 0;
+        }
+        
     }
 
     // Update is called once per frame
@@ -110,10 +116,34 @@ public class DraggingManager : MonoBehaviour
             tutorialUI.SetActive(true);
         }
 
-
-        
-
     }
+
+    public void PlayExplanationAudio(int index)
+    {
+        //Check index
+        if(index < audioSpiegati.Length)
+        {
+            //Se c'è un audio in riproduzione
+            if(audioSpiegazione.isPlaying)
+            {
+                //Ferma l'audio in riproduzione
+                audioSpiegazione.Stop();
+            }
+            //Se l'audio non è già stato riprodotto
+            if(audioSpiegati[index] == 0)
+            {
+                
+                //Aggiorna la clip audio dell'audiosource
+                audioSpiegazione.clip = explanationAudio[index].audioClip;
+                //Mette un play delayed
+                audioSpiegazione.PlayDelayed(0.5f);
+                //Segna che l'audio è stato già riprodotto
+                audioSpiegati[index] = 1;
+            }
+        }
+    }
+
+    
 
     //L'esperienza viene fatta ripartire ripristinando il materiale di highlight per tutte le parti
     //del velivolo e re-instanziando il modellino prefab delle parti di aereo da sistemare.

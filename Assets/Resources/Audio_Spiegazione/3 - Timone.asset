@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b98fa81f6ca467418c3e5e9e0dc12d5, type: 3}
-  m_Name: DragXPUI
+  m_Script: {fileID: 11500000, guid: 432459515a9b9244493ac8b2aa8d1aeb, type: 3}
+  m_Name: 3 - Timone
   m_EditorClassIdentifier: 
-  descrizioneOggettoUI: 
-  immagineDaMostrare: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 685aae06f3c691645b99c39b88b61e3e, type: 3}
+  UICardIndex: 3

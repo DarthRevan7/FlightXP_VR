@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     private LayerMask ignoreLayers;
     private float lifetime;
 
+    public GameObject explPrefab;
+
     public void Initialize(Vector3 velocity, LayerMask layers, float lifeTime, LayerMask ignoreL)
     {
         rb = GetComponent<Rigidbody>();
@@ -38,9 +40,11 @@ public class Bullet : MonoBehaviour
         if ((hitLayers.value & (1 << other.gameObject.layer)) > 0)
         {
             Debug.Log("Bullet hit: " + other.gameObject.name);
-            Destroy(gameObject); // Destroy bullet on impact
+            
+            GameObject expl = Instantiate(explPrefab, rb.position, Quaternion.identity);
 
             Destroy(other.gameObject);
+            Destroy(gameObject); // Destroy bullet on impact
         }
         else
         {

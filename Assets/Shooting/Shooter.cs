@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Shooter : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class Shooter : MonoBehaviour
     public float shotPosOffset = 2.0f;
 
     Rigidbody plane_rb;
+
+    public GameObject explPrefab;
+
+    public InputActionReference shoot_command;
 
     public void Start()
     {
@@ -29,6 +34,7 @@ public class Shooter : MonoBehaviour
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
+            bulletScript.explPrefab = explPrefab;
             bulletScript.Initialize(plane_rb.transform.forward * bulletSpeed + plane_rb.linearVelocity, hitLayers, bulletLifetime, ignoreLayers);
         }
     }
@@ -37,7 +43,7 @@ public class Shooter : MonoBehaviour
     
     public void Update()
     {
-        if (Time.time - last_shot > 1.0f / shotsPerSecond)
+        if (shoot_command.action.IsPressed() && Time.time - last_shot > 1.0f / shotsPerSecond)
         {
             last_shot = Time.time;
             Shoot();

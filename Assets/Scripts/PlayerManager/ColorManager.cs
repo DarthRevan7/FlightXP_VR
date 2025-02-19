@@ -68,7 +68,7 @@ public class ColorManager : MonoBehaviour
             GameObject.FindAnyObjectByType<DraggingManager>().SetPlaneMaterial(planeMaterial);
         }
 
-        // ChangeDecalMaterial(decalMaterial);
+        ChangeDecalMaterial(decalMaterial);
 
         
     }
@@ -82,10 +82,14 @@ public class ColorManager : MonoBehaviour
             if(aereoGraphics != null)
             {
                 fullModel = aereoGraphics.transform.Find("FullModel");
-                fullModel.GetComponent<MeshRenderer>().materials[1] = decalMaterial;
+                Material []materials = new Material[2];
+
+                materials[0] = planeMaterial;
+                materials[1] = decalMaterial;
+                fullModel.GetComponent<MeshRenderer>().materials = materials;
                 for(int i = 0; i < fullModel.childCount; i++)
                 {
-                    fullModel.GetChild(i).GetComponent<MeshRenderer>().materials[1] = decalMaterial;
+                    fullModel.GetChild(i).GetComponent<MeshRenderer>().materials = materials;
                 }
             }
             if(SceneManager.GetActiveScene().name.Equals("Scena_Terra"))
@@ -96,7 +100,7 @@ public class ColorManager : MonoBehaviour
                 {
                     
                     MeshRenderer[] renderers = aereoNoPhysics.GetComponentsInChildren<MeshRenderer>();
-                    Material []materials = new Material[2];//renderers[0].materials;
+                    Material []materials = new Material[2];
 
                     materials[0] = planeMaterial;
                     materials[1] = decalMaterial;
@@ -104,7 +108,6 @@ public class ColorManager : MonoBehaviour
                     for(int i = 0; i < renderers.Length; i++)
                     {
                         renderers[i].materials = materials;
-                        
                         
                     }
 

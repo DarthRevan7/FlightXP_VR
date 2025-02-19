@@ -69,6 +69,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "fire",
+                    "type": "Button",
+                    "id": "00d00950-8b72-4070-9463-cc20b7debe0c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "exit",
                     "type": "Button",
                     "id": "3f0b5ada-2a6b-41ee-a7df-d99d68d310e9",
@@ -153,6 +162,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "repeatStep",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "123c938f-3e72-4a17-b3d2-ed4b57c63cba",
+                    "path": "<OculusTouchController>{LeftHand}/triggerPressed",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

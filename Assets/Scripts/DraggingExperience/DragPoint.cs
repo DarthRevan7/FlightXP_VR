@@ -27,10 +27,15 @@ public class DragPoint : MonoBehaviour
     [SerializeField] private StepManager stepManagerUI;
     [SerializeField] private AudioSource audioSource;
 
+    
+
 
     void Awake()
     {
         audioSource = GameObject.Find("OggettoPosizionatoBene").GetComponent<AudioSource>();
+
+
+        
     }
 
     public void CoverPanelDeactivate()
@@ -59,6 +64,10 @@ public class DragPoint : MonoBehaviour
             GameObject activeElement = ReturnActiveElement();
             if(activeElement != null)
             {
+                //Se il pannello è attivo, allora devo far fare un play alla traccia
+
+                
+                GameObject.FindAnyObjectByType<DraggingManager>().PlayExplanationAudio(UICardIndex);
                 activeElement.SetActive(false);
                 UICards[UICardIndex].SetActive(true);
                 stepManagerUI.SetCurrentStepIndex(UICardIndex); 

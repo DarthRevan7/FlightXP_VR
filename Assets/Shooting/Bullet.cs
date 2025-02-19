@@ -39,6 +39,8 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("Bullet hit: " + other.gameObject.name);
             Destroy(gameObject); // Destroy bullet on impact
+
+            Destroy(other.gameObject);
         }
         else
         {

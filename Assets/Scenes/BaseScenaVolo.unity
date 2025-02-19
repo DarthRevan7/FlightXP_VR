@@ -1657,6 +1657,28 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 7199693763693352323, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
   m_PrefabInstance: {fileID: 1590345498}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &330868541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330868532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6116ccb995e8e8498ed83a6366e7585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exit_action:
+    m_Name: Exit_action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a03cc2bb-1abb-4563-9698-5e97c732562b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  sceneToExitTo: Scena_Terra
 --- !u!1001 &375220296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2040,7 +2062,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 354264762544688845, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 330868541}
   m_SourcePrefab: {fileID: 100100000, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
 --- !u!1 &1590345499 stripped
 GameObject:
@@ -2078,6 +2103,7 @@ GameObject:
   - component: {fileID: 1757118673}
   - component: {fileID: 1757118672}
   - component: {fileID: 1757118671}
+  - component: {fileID: 1757118674}
   m_Layer: 4
   m_Name: Ocean
   m_TagString: Untagged
@@ -2153,6 +2179,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1884093213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1757118674
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757118670}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1884093212
 GameObject:
   m_ObjectHideFlags: 0

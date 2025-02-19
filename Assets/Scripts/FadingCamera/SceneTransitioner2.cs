@@ -36,6 +36,7 @@ public class SceneTransitioner2 : MonoBehaviour
 
     public void StartTransition()
     {
+        if(transitioning) return;
         transitioning = true;
         fadeEffect.targetAlpha = 1.0f;
         fadeEffect.isFading = true;

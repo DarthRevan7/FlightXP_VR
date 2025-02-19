@@ -58,7 +58,7 @@ public class TutorialManager : MonoBehaviour
 
         tutorialImage = GameObject.Find("TutorialImage").GetComponent<Image>();
 
-        SetTutorialImage();
+        // SetTutorialImage();
         //Assicurarsi che la traccia non parta in Awake.
         // audioSource.playOnAwake = false;
 
@@ -82,39 +82,54 @@ public class TutorialManager : MonoBehaviour
         //Premi pulsante x ripetere il tutorial
         if(currentStep == 0)
         {
+            SetTutorialImage();
             VerificaStepPressione(repeatStep);
         }
         //Pitch (su e giù)
         if(currentStep == 1)
         {
+            SetTutorialImage();
             inputLimiter.tutorialAllowPitch = true;
             VerificaStepRotazione(pitch, rotationThreshold);
         }
         //Roll (Rotazione dx o sx)
         if(currentStep == 2)
         {
+            SetTutorialImage();
             inputLimiter.tutorialAllowRoll = true;
             VerificaStepRotazione(roll, rotationThreshold);
         }
         // Yaw (Rotazione rispetto all'alto dx sx)
         if(currentStep == 3)
         {
+            SetTutorialImage();
             inputLimiter.tutorialAllowYaw = true;
             VerificaStepRotazione(yaw,rotationThreshold);
         }
         //Potenza del motore
         if(currentStep == 4)
         {
+            SetTutorialImage();
             inputLimiter.tutorialAllowThrottle = true;
             VerificaStepRotazione(throttle,rotationThreshold);
         }
         //Autopilota
         if(currentStep == 5)
         {
-            inputLimiter.autopilotEngaged = false;
-            inputLimiter.tutorialActive = false;
-            inputLimiter.tutorialAllowAutopilot = true;
-            VerificaStepPressione(autopilot);
+            SetTutorialImage(); 
+            if(inputLimiter.tutorialActive)
+            {
+                inputLimiter.autopilotEngaged = false;
+                inputLimiter.tutorialActive = false;
+                inputLimiter.tutorialAllowAutopilot = true;
+            }
+            VerificaAutopilot();
+        }
+
+        if(currentStep == 6)
+        {
+            FindAnyObjectByType<SceneTransitioner2>().StartTransition();
+            currentStep++;
         }
     }
 
@@ -144,6 +159,7 @@ public class TutorialManager : MonoBehaviour
         inputLimiter.tutorialAllowThrottle = false;
         inputLimiter.tutorialAllowYaw = false;
         inputLimiter.tutorialActive = true;
+        tutorialImage.color = new Color(255,255,255,0);
         //Va avanti nel tutorial
         //Se l'audio source non sta venendo riprodotta
         //Se ci sono altri step rimasti
@@ -170,7 +186,7 @@ public class TutorialManager : MonoBehaviour
                 currentStep++;
                 audioSource.clip = tutorialSteps[currentStep].audioClip;
                 audioSource.PlayDelayed(delayTime);
-                SetTutorialImage();
+                // SetTutorialImage();
 
                 //Resetta le congratulazioni
                 congratsIndex = -1;
@@ -202,11 +218,20 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
+    public void VerificaAutopilot()
+    {
+        if(!verifiedStep && !audioSource.isPlaying)
+        {
+            verifiedStep = inputLimiter.autopilotEngaged;
+        }
+    }
+
     //Setta l'immagine del tutorial in base allo step corrente.
     public void SetTutorialImage()
     {
         //Nel caso non funzionasse, prova ad inserire una sprite placeholder
         tutorialImage.sprite = tutorialSteps[currentStep].tutorialSprite;
+        tutorialImage.color = new Color(255,255,255,255);
     }
     
 }

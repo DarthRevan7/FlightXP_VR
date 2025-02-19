@@ -1654,6 +1654,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
+      propertyPath: currentStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
       propertyPath: inputLimiter
       value: 
       objectReference: {fileID: 375220305}
@@ -1716,7 +1720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2210,6 +2214,10 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 375220297}
+    - target: {fileID: 5256712002287889868, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+      propertyPath: sceneName
+      value: Scena_Terra
+      objectReference: {fileID: 0}
     - target: {fileID: 5901555532861558793, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: plane
       value: 
@@ -2278,6 +2286,10 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 375220297}
+    - target: {fileID: 8708164682640982930, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

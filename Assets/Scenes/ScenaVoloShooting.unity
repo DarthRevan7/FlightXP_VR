@@ -1581,7 +1581,7 @@ PrefabInstance:
     - target: {fileID: 2163849819498196568, guid: 472ac3e311af92549b4323cbbcf81a1d, type: 3}
       propertyPath: shoot_command
       value: 
-      objectReference: {fileID: 593729488674619724, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: -237453330529250884, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 2163849819498196568, guid: 472ac3e311af92549b4323cbbcf81a1d, type: 3}
       propertyPath: hitLayers.m_Bits
       value: 1024
@@ -1747,15 +1747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6116ccb995e8e8498ed83a6366e7585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exit_action:
-    m_Name: Exit_action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a03cc2bb-1abb-4563-9698-5e97c732562b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
+  exit_action: {fileID: 7088988529173377258, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
   sceneToExitTo: Scena_Terra
 --- !u!1001 &375220296
 PrefabInstance:
@@ -1844,23 +1836,23 @@ PrefabInstance:
     - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: yaw
       value: 
-      objectReference: {fileID: -5304421558017920340, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: -5289548289861798516, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: roll
       value: 
-      objectReference: {fileID: 3675231955475858612, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: 8221918154107016454, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: pitch
       value: 
-      objectReference: {fileID: 1945596340158229729, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: 587947352263130072, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: throttle
       value: 
-      objectReference: {fileID: 7103236484362725349, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: 9128271210790255251, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: autopilot
       value: 
-      objectReference: {fileID: 131111903711305745, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: -3062701165317179265, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 4995246513430640696, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1912,10 +1904,10 @@ PrefabInstance:
     - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_Actions
       value: 
-      objectReference: {fileID: -944628639613478452, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: -944628639613478452, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_DefaultActionMap
-      value: plane_input
+      value: Meta Quest 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2222,12 +2214,12 @@ PrefabInstance:
       objectReference: {fileID: 375220297}
     - target: {fileID: 2968761489779224756, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: vr
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2968761489779224756, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: camera_input
       value: 
-      objectReference: {fileID: -6598072970733331125, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: -8967400262048014999, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 3863013400737974727, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: plane
       value: 
@@ -2512,7 +2504,7 @@ PrefabInstance:
     - target: {fileID: 2163849819498196568, guid: 472ac3e311af92549b4323cbbcf81a1d, type: 3}
       propertyPath: shoot_command
       value: 
-      objectReference: {fileID: 593729488674619724, guid: 038b09056bc047c4a86d83e2fe52e6b6, type: 3}
+      objectReference: {fileID: -237453330529250884, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 2163849819498196568, guid: 472ac3e311af92549b4323cbbcf81a1d, type: 3}
       propertyPath: hitLayers.m_Bits
       value: 1024
@@ -2582,7 +2574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPositions: []
-  victoryScene: Scena_Terra
+  victoryScene: Transition_FromShooting
 --- !u!1 &1846301081
 GameObject:
   m_ObjectHideFlags: 0

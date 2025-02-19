@@ -1669,15 +1669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6116ccb995e8e8498ed83a6366e7585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exit_action:
-    m_Name: Exit_action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a03cc2bb-1abb-4563-9698-5e97c732562b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
+  exit_action: {fileID: 7088988529173377258, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
   sceneToExitTo: Scena_Terra
 --- !u!1001 &375220296
 PrefabInstance:

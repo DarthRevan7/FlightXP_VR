@@ -42,6 +42,18 @@ public class SceneTransitioner2 : MonoBehaviour
         fadeEffect.isFading = true;
     }
 
+    public void TutorialTransition()
+    {
+        sceneName = "ScenaVoloTutorial";
+        StartTransition();
+    }
+
+    public void ShootingTransition()
+    {
+        sceneName = "ScenaVoloShooting";
+        StartTransition();
+    }
+
     
 
     // private IEnumerator SceneTransitioning()

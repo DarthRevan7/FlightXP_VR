@@ -1654,6 +1654,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
+      propertyPath: yaw
+      value: 
+      objectReference: {fileID: -5289548289861798516, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
+      propertyPath: roll
+      value: 
+      objectReference: {fileID: 8221918154107016454, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
+      propertyPath: pitch
+      value: 
+      objectReference: {fileID: 587947352263130072, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
+      propertyPath: throttle
+      value: 
+      objectReference: {fileID: 9128271210790255251, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
+      propertyPath: autopilot
+      value: 
+      objectReference: {fileID: -3062701165317179265, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
+      propertyPath: repeatStep
+      value: 
+      objectReference: {fileID: -237453330529250884, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 6106149023221853015, guid: 169d2a9aba7a0b94691d6ca238ba26d4, type: 3}
       propertyPath: currentStep
       value: 0
       objectReference: {fileID: 0}

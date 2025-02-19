@@ -41,21 +41,34 @@ public class ColorManager : MonoBehaviour
     void UpdateMaterial(Scene scene, LoadSceneMode loadSceneMode)
     {
         //Trova i componenti dell'aereo o l'oggetto aereo ed assegnagli il materiale giusto
-        GameObject aereo = GameObject.Find("aereo");
-        GameObject fusoliera = GameObject.Find("fusoliera");
+        // GameObject aereo = GameObject.Find("aereo");
+        // GameObject fusoliera = GameObject.Find("fusoliera");
 
         aereoGraphics = GameObject.Find("AereoGraphics");
         if(aereoGraphics != null)
         {
+            Debug.Log("Trovato aereo graphix");
             fullModel = aereoGraphics.transform.Find("FullModel");
-            fullModel.GetComponent<MeshRenderer>().materials[0] = planeMaterial;
+            
+            Material []materials = new Material[2];
+            materials[0] = planeMaterial;
+            materials[1] = fullModel.GetComponent<MeshRenderer>().materials[1];
+            fullModel.GetComponent<MeshRenderer>().materials = materials;
             for(int i = 0; i < fullModel.childCount; i++)
             {
-                fullModel.GetChild(i).GetComponent<MeshRenderer>().materials[0] = planeMaterial;
+
+                fullModel.GetChild(i).GetComponent<MeshRenderer>().materials = materials;
             }
         }
 
-        ChangeDecalMaterial(decalMaterial);
+        //Se sono nella scena terra
+        if(scene.name.Equals("Scena_Terra") && experienceDone)
+        {
+            //Setto il materiale x l'aereo.
+            GameObject.FindAnyObjectByType<DraggingManager>().SetPlaneMaterial(planeMaterial);
+        }
+
+        // ChangeDecalMaterial(decalMaterial);
 
         
     }

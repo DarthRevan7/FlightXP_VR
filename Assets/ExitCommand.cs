@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class ExitCommand : MonoBehaviour
 {
-    public InputAction exit_action;
+    public InputActionReference exit_action;
     public String sceneToExitTo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,7 @@ public class ExitCommand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(exit_action!=null && exit_action.IsPressed()) 
+        if(exit_action!=null && exit_action.action.IsPressed()) 
         {
             SceneTransitioner2 tr = FindAnyObjectByType<SceneTransitioner2>();
             tr.sceneName = sceneToExitTo;

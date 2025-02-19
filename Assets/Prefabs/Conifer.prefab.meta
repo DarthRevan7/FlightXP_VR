@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cce4d8667f2436a479759f07084d8ff4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 213197
+  packageName: Unity Terrain - URP Demo Scene
+  packageVersion: 1.0.3
+  assetPath: Assets/My_Assets/TerrainSampleAssets/Prefabs/Trees/Conifer/Conifer.prefab
+  uploadId: 727820

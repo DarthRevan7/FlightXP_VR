@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e730e362773695e408e48f59e6dff87a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 213197
+  packageName: Unity Terrain - URP Demo Scene
+  packageVersion: 1.0.3
+  assetPath: Assets/My_Assets/TerrainSampleAssets/Prefabs/Trees/Cypress/Cypress_Forest_Desktop.prefab
+  uploadId: 727820

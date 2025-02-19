@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4652ec2f3a1009845ac180627188f64a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 213197
+  packageName: Unity Terrain - URP Demo Scene
+  packageVersion: 1.0.3
+  assetPath: Assets/UserPackages/TextMesh Pro/Fonts/InterBold.asset
+  uploadId: 727820

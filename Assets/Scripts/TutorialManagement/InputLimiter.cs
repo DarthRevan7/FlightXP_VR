@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using System.Collections.Generic;
+using UnityEngine.XR;
 public class InputLimiter : MonoBehaviour
 {
 
@@ -34,6 +35,10 @@ public class InputLimiter : MonoBehaviour
     public float target_roll = 0;
     public float target_speed = 70;
 
+    public float minThrottleForVibration = 0.25f;
+
+    List<UnityEngine.XR.InputDevice> targetDevices = new List<UnityEngine.XR.InputDevice>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,6 +46,14 @@ public class InputLimiter : MonoBehaviour
         planePhy = GetComponent<PlanePhyRB>();
         last_vel = planePhy.gameObject.GetComponent<Rigidbody>().linearVelocity;
         last_ang_vel = planePhy.gameObject.GetComponent<Rigidbody>().angularVelocity;
+
+        var inputDevices = new List<UnityEngine.XR.InputDevice>();
+        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.HeldInHand | InputDeviceCharacteristics.Controller, inputDevices);
+
+        for(int i = 0; i < inputDevices.Count; i++)
+        {
+            targetDevices.Add(inputDevices[i]);
+        }
     }
 
     // Update is called once per frame
@@ -51,8 +64,11 @@ public class InputLimiter : MonoBehaviour
         float yaw_in = yaw.action.ReadValue<float>();
         float throttle_in = planePhy.throttle_control;
 
+        bool throttleVibration = false;
+
         if (Mathf.Abs(throttle.action.ReadValue<float>()) > throttle_dead_zone)
         {
+            throttleVibration = true;
             throttle_in = throttle.action.ReadValue<float>();
             if (throttle_in > 0.0f) throttle_in = 1.0f;
             else throttle_in = 0.0f;
@@ -65,7 +81,7 @@ public class InputLimiter : MonoBehaviour
 
         if(autopilotEngaged||tutorialActive)
         {
-
+            throttleVibration = false;
             //float target_vspeed = 0;
             // float target_alt = 500;
 
@@ -104,6 +120,7 @@ public class InputLimiter : MonoBehaviour
 
                 if (Mathf.Abs(throttle.action.ReadValue<float>()) > throttle_dead_zone)
                 {
+                    throttleVibration = true;
                     throttle_in = throttle.action.ReadValue<float>();
                     if (throttle_in > 0.0f) throttle_in = 1.0f;
                     else throttle_in = 0.0f;
@@ -113,7 +130,13 @@ public class InputLimiter : MonoBehaviour
             if(tutorialAllowYaw) yaw_in = yaw.action.ReadValue<float>();
         }
 
-
+        if(planePhy.throttle_control>minThrottleForVibration && throttleVibration)
+        {
+            foreach(UnityEngine.XR.InputDevice targetDevice in targetDevices)
+            {
+                targetDevice.SendHapticImpulse(0,  (planePhy.throttle_control-minThrottleForVibration)/(1.0f-minThrottleForVibration), 0.1f);
+            }
+        }
 
         last_vel = planePhy.vel;
         last_ang_vel = planePhy.ang_vel;

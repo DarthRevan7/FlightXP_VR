@@ -1737,9 +1737,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: yaw
+      value: 
+      objectReference: {fileID: -5289548289861798516, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: roll
+      value: 
+      objectReference: {fileID: 8221918154107016454, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: pitch
+      value: 
+      objectReference: {fileID: 587947352263130072, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: throttle
+      value: 
+      objectReference: {fileID: 9128271210790255251, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 4698981944123741720, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: autopilot
+      value: 
+      objectReference: {fileID: -3062701165317179265, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 5100718135582818404, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: m_Name
       value: Aereo_rb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
+    - target: {fileID: 8900636172097250643, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Meta Quest 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1837,6 +1865,14 @@ PrefabInstance:
       propertyPath: plane
       value: 
       objectReference: {fileID: 375220297}
+    - target: {fileID: 2968761489779224756, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+      propertyPath: vr
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968761489779224756, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+      propertyPath: camera_input
+      value: 
+      objectReference: {fileID: -8967400262048014999, guid: 8fdc5f854cf331547ab3dcdf6903a2d3, type: 3}
     - target: {fileID: 3863013400737974727, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
       propertyPath: plane
       value: 

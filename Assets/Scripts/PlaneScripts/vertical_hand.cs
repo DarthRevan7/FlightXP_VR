@@ -13,11 +13,11 @@ public class vertical_hand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlanePhy2 planePhy2 = plane.GetComponent<PlanePhy2>();
+        PlanePhyRB planePhy2 = plane.GetComponent<PlanePhyRB>();
 
         Vector3 currentRotation = transform.localEulerAngles;
 
-        float hand_rot = -planePhy2.getVerticalSpeed() / 20.0f * 180.0f;
+        float hand_rot = planePhy2.vel.y / 20.0f * 180.0f;
 
         if (hand_rot > 170.0f) hand_rot = 170.0f;
         if (hand_rot < -170.0f) hand_rot = -170.0f;

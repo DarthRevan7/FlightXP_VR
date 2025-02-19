@@ -10,7 +10,7 @@ public class DecalCollider : MonoBehaviour
     [SerializeField] private GameObject particlePrefab;
 
     [SerializeField] private Color splashColor;
-    [SerializeField] private float timeToDestruction = 2f;
+    //[SerializeField] private float timeToDestruction = 2f;
     [SerializeField] private Vector3 startingPosition;
     [SerializeField] private AudioSource audioSource;
 

@@ -6,7 +6,7 @@ public class ExplosionManager : MonoBehaviour
 
     [SerializeField] private List<ParticleSystem> explosions;
 
-
+    public AudioSource explosionSound;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,5 +27,6 @@ public class ExplosionManager : MonoBehaviour
         {
             ps.Play();
         }
+        explosionSound.Play();
     }
 }

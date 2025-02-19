@@ -241,6 +241,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aereo
       objectReference: {fileID: 0}
+    - target: {fileID: 5521233540065886277, guid: 35e153e769e31f14abb9881bbe805821, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521233540065886277, guid: 35e153e769e31f14abb9881bbe805821, type: 3}
+      propertyPath: m_ImplicitTensor
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

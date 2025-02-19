@@ -14,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlaneModel
+  - PlaneColliders
+  - Tutorial
+  - Bullets
+  - Target
   - 
   - 
   - 

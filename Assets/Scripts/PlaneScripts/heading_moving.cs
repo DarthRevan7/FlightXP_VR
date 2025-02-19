@@ -18,11 +18,11 @@ public class heading_moving : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        PlanePhy2 planePhy2 = plane.GetComponent<PlanePhy2>();
+        PlanePhyRB planePhy2 = plane.GetComponent<PlanePhyRB>();
 
-        Vector3 plane_att = planePhy2.getAttitude();
+        Vector3 plane_att = planePhy2.rot;
 
-        float yawDegrees = plane_att.z * Mathf.Rad2Deg;
+        float yawDegrees = plane_att.y;
 
         transform.localRotation = start_rot * Quaternion.Euler(yawDegrees, 0, 0);  
     }

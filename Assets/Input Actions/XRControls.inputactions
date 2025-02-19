@@ -51,9 +51,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Autopilot",
+                    "name": "autopilot",
                     "type": "Button",
                     "id": "048ad044-e7c6-43cb-8190-473032c4e092",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "repeatStep",
+                    "type": "Button",
+                    "id": "71af63c3-b80c-4249-9552-9db85ac98315",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -123,7 +132,18 @@
                     "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
-                    "action": "Autopilot",
+                    "action": "autopilot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "262ad8ed-0b98-4396-b7f4-3cdaffc2879a",
+                    "path": "<OculusTouchController>{RightHand}/primaryButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "repeatStep",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

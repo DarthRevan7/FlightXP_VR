@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneTransitioner2 : MonoBehaviour
 {
 
-    [SerializeField] private string sceneName;
+    [SerializeField] public string sceneName;
     [SerializeField] private FadeEffect2 fadeEffect;
 
     public bool transition = false;
@@ -36,6 +36,7 @@ public class SceneTransitioner2 : MonoBehaviour
 
     public void StartTransition()
     {
+        if(transitioning) return;
         transitioning = true;
         fadeEffect.targetAlpha = 1.0f;
         fadeEffect.isFading = true;

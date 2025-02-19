@@ -40,8 +40,7 @@ public class DragPoint : MonoBehaviour
 
     public void CoverPanelDeactivate()
     {
-                    coverPanel.SetActive(false);
-
+        coverPanel.SetActive(false);
     }
     private void OnCollisionEnter(Collision other) {
         //Ricavo le stringhe dei nomi dei gameobjects

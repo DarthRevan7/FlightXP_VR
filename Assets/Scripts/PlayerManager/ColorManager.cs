@@ -38,6 +38,8 @@ public class ColorManager : MonoBehaviour
         SceneManager.sceneLoaded += ReloadHangarScene;
     }
 
+    
+
     void UpdateMaterial(Scene scene, LoadSceneMode loadSceneMode)
     {
         //Trova i componenti dell'aereo o l'oggetto aereo ed assegnagli il materiale giusto
@@ -133,10 +135,12 @@ public class ColorManager : MonoBehaviour
                 draggingManager.experienceFinished = true;
                 GameObject.Destroy(aereoPezzi);
                 //draggingManager.SetPlaneMaterial(planeMaterial);
-
+                DragPoint[] dragPoints = GameObject.FindObjectsByType<DragPoint>(FindObjectsSortMode.None);
+                for(int i=0;i<dragPoints.Length;i++)
+                {
+                    dragPoints[i].CoverPanelDeactivate();
+                }
             }
         }
-
-
     }
 }

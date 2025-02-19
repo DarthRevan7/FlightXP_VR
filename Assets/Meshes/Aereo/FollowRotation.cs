@@ -13,7 +13,7 @@ public class FollowRotation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         transform.localRotation = other.transform.localRotation;
     }

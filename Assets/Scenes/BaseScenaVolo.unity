@@ -1784,6 +1784,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4995246513430640696, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
+      propertyPath: explosionSound
+      value: 
+      objectReference: {fileID: 522384111}
+    - target: {fileID: 4995246513430640696, guid: 27a97905fe117464f81f37bf542e5222, type: 3}
       propertyPath: 'explosions.Array.data[0]'
       value: 
       objectReference: {fileID: 894344672}
@@ -1907,6 +1911,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fa6d6cb17afd442b6d9e8d7c0e57cc, type: 3}
+--- !u!82 &522384111 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 288895046972489796, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}
+  m_PrefabInstance: {fileID: 1590345498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &894344665 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 3489351811081384444, guid: 4f70276d10fadda4c9b68fdf46a48ebc, type: 3}

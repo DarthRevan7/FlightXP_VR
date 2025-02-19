@@ -18,9 +18,12 @@ public class Shooter : MonoBehaviour
 
     public InputActionReference shoot_command;
 
+    public AudioSource shootAudio;
+
     public void Start()
     {
         plane_rb = GetComponentInParent<Rigidbody>();
+        shootAudio = GetComponent<AudioSource>();
     }
 
     public void Shoot()
@@ -47,6 +50,20 @@ public class Shooter : MonoBehaviour
         {
             last_shot = Time.time;
             Shoot();
+            if(shootAudio != null)
+            {
+                if(!shootAudio.isPlaying)
+                {
+                    shootAudio.Play();
+                }
+            }
+        }
+        if(shootAudio != null)
+        {
+            if(!shoot_command.action.IsPressed() && shootAudio.isPlaying)
+            {
+                shootAudio.Stop();
+            }
         }
     }
 }
